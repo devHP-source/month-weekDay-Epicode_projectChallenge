@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color: #D60176;
+    --secondary-color: #192155;
+    --border-color: #fbe4ae;
+    --border-section-color: rgb(20, 132, 132);
+    --link-color: rgb(20, 132, 132);
+}
+
+body {
+    text-align: center;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* HEADER */
+header .logo {
+    width: 150px;
+    margin: 0 auto;
+}
+
+/* NAVIGATION */
+nav {
+    background-color: #fdfbf1;
+    padding: 16px;
+    margin-top: 15px;
+    border-top: 2px solid #fbe4ae;
+    text-align: center;
+    font-size: 13px;
+}
+
+nav span {
+    color: #427976;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+/* MAIN CONTENT */
+.main-container {
+    width: 50%;
+    text-align: left;
+    margin: auto;
+}
+
+.main-container h1 {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+/* IMAGE */
+.main-image {
+    width: 100%;
+    border-radius: 8px;
+    height: 600px;
+    object-fit: cover;
+    box-shadow: 4px 4px 10px 0px;
+    cursor: pointer;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+figcaption {
+    margin-top: 8px;
+    text-align: center;
+    color: #bcbcbc;
+    font-size: 16px;   
+}
+
+a {
+    color: var(--link-color);
+}
+
+/* FEATURED SECTION */
+.featured-container {
+    border-left: 2px solid var(--border-color);
+    padding: 2px 15px;
+    margin-top: 30px;
+}
+
+.featured-container .featuring {
+    color: #b5472a;
+    text-transform: uppercase;
+}
+
+.featured-container .featured-link {
+    color: var(--link-color);
+}
+
+.featuring-title {
+    margin: 0;
+    padding: 0;
+}
+
+/* INGREDIENTS SECTION */
+.ingredients-container h2 {
+    border-bottom: 1px solid var(--border-section-color);
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    font-weight: 500;
+}
+
+ul {
+    margin-bottom: 24px;
+}
+
+li {
+    margin-bottom: 12px;
+}
+
+/* METHOD SECTION */
+.method h2 {
+    border-bottom: 1px solid var(--border-section-color);
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    font-weight: 500;
+}
+
+.method .method-title-1 {
+    font-weight: 600;
+}
+
+/* FOOTER SECTION */
+footer p {
+    text-align: left;
+}
