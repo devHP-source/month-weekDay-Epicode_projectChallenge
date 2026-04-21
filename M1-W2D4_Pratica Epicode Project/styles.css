@@ -139,9 +139,10 @@ ion-icon {
 .article-card {
     display: flex;
     align-items: center;
+    justify-content: space-around;
     gap: 15px;
     padding: 24px 0;
-    position: relative;
+    /* position: relative; */
 }
 /* article CONTENT */
 .article-content {
@@ -192,17 +193,22 @@ ion-icon {
 }
 .date-left {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     gap: 8px;
 }
+
+.date-left span:not(:first-child):not(.topic)::before { /* PSEUDO ADDED */
+    content: '·';
+    margin: 0 8px;
+}
+
 .article-date .topic {
     background-color: var(--topicBG-color);
     padding: 2px 8px;
     border-radius: 12px;
     cursor: pointer;
 }
-
-
 
 /* article BTN */
 .article-btn {
@@ -217,9 +223,14 @@ ion-icon {
 }
 
 /* article THUMBNAIL */
-.article-thumbnail img {
+.article-thumbnail {
     width: 250px;
     height: 200px;
+}
+
+.article-thumbnail img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 /* article RESPONSIVE */
@@ -254,8 +265,7 @@ ion-icon {
 .advertise {
     border-bottom: 2px solid var(--border-color);
     padding: 24px;
-    width: 100%;
-    min-width: 400px;
+    margin: 0;
     box-sizing: border-box;
 }
 .advertise h3 {
@@ -297,7 +307,7 @@ ion-icon {
     display: flex;
     justify-content: center;
     text-align: center;
-    margin: 24px;
+    margin: 24px 90px;
 }
 .connect {
     display: flex;
@@ -318,11 +328,12 @@ ion-icon {
 .advertise a {
     display: flex;
     justify-content: center;
+    align-items: center;
     text-align: center;
     color: var(--inactive-color);
     font-weight: 500;
-    cursor: pointer;
-    margin-bottom: 12px;
+    cursor: default;
+    margin: 24px 0 24px 0;
 }
 
 /* RECOMMENDED TOPICS */
