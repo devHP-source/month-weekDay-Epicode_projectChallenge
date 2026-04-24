@@ -59,25 +59,25 @@ la stessa cosa.
  Scriti il codice necessario ad effettuare un addizione (una somma) dei numeri 12 e 20.
 */
 
-let a = 12
-let b = 20
-let risulato = a+b
+const a = 12
+const b = 20
+const risulato = a+b
 console.log(risulato)
 
 /* ESERCIZIO 3
  Crea una variable di nome "x" e assegna ad essa il numero 12.
 */
-let x = 12
+const x = 12
 
 /* ESERCIZIO 4
  Crea una variable chiamata "name" e assegna ad essa il tuo nome, sotto forma di stringa.
 */
-let name = "Paulo"
+const name = "Paulo"
 
 /* ESERCIZIO 5
  Esegui una sottrazione tra i numeri 4 e la variable "x" appena dichiarata (che contiene il numero 12).
 */
-let num = 4
+const num = 4
 let esercizioCinque = x - 4
     console.log(esercizioCinque)
 
@@ -90,10 +90,11 @@ let esercizioCinque = x - 4
  trasformate in lowercase (senza cambiare il valore di name2!).
 */
 
-let name1 = "john"
-let name2 = "John"
-let domanda = "I due STRING dichiarati, sono le stesse nomi?"
-console.log(domanda)
-console.log(name1 === name2)
+const name1 = "john"
+const name2 = "John"
+const domanda = "I due STRING dichiarati, sono le stesse nomi?"
+const comparison = name1 === name2
+console.log(domanda + " La rispota e': " + comparison)
+// console.log(name1 === name2)
 
 console.log(name1.toLowerCase() === name2.toLowerCase())
