@@ -125,9 +125,8 @@ const jobs = [
   },
 ]
 
-
-/* PARTE 1 */
-
+/* PARTE 1: VERSION 1 */
+/* 
 const inputTitle = document.getElementById('title');
 const inputLocation = document.getElementById('location');
 const form = document.querySelector('form');
@@ -159,7 +158,7 @@ return {
 /* Aggiunge un TR, con dentro TD e valore "valore e location"
 * Creare un TR
 * Creare TD
-*/
+//
 function addResultTableRow(title, location) {
   const tr = document.createElement('tr'); // crea un TR
   const titleTD = document.createElement('td'); // crea un TD
@@ -173,7 +172,7 @@ function addResultTableRow(title, location) {
   table.appendChild(tr)
 }
 
-/* Recupera i valori, scritte sull'input */
+// Recupera i valori, scritte sull'input
 function getInputValue() {
   return {
     title: inputTitle.value,
@@ -207,3 +206,59 @@ form.addEventListener('submit', (e) => {
     generateEmpthyMessage()
   }
 })
+*/
+
+
+/* PART 1: VERSION 2 */
+function searchJob(searchTitle, searchLocation) { // Search function
+  const inputTitle = searchTitle.toLowerCase(); //case sensitive for Title
+  const inputLocation = searchLocation.toLowerCase(); //case sensitive for Location
+
+  let searchResults = { // Oggetto come richiesto
+    result: [],
+    count: 0
+  };
+
+  for(let i = 0; i < jobs.length; i++) { // ciclo FOR per scorrere l'array JOBS
+    const currentJob = jobs[i];
+    const jobTitle = currentJob.title.toLowerCase();
+    const jobLoc = currentJob.location.toLowerCase();
+
+    if (jobTitle.includes(inputTitle) && jobLoc.includes(inputLocation)) { // Verifica entrambi i parametri
+      searchResults.result.push(currentJob);
+      searchResults.count++;
+    }
+  }
+return searchResults;
+}
+
+const searchButton = document.getElementById('searchBtn'); // riga 70: HTML
+
+searchButton.onclick = function() {
+  const inputJob = document.getElementById('jobTitle').value;
+  const inputLoc = document.getElementById('location').value;
+  const tableBody = document.getElementById('resultsBody');
+
+  tableBody.innerHTML = ""; // toglie la tabella
+
+  if (inputJob === "" && inputLoc === "") {
+    tableBody.innerHTML = '<tr><td colspan="2" class="placeholder-cell">Compila i campi vuoti</td></tr>';
+  return;
+  }
+
+  const finalSearch = searchJob(inputJob, inputLoc);
+
+  if (finalSearch.count === 0) {
+    tableBody.innerHTML = '<tr><td colspan="2" class="placeholder-cell">No data has been found.</td></tr>';
+  } else {
+    for (let j = 0; j < finalSearch.result.length; j++) { // Visualizzazione sui risultati nel DOM
+      const matchResult = finalSearch.result[j];
+      const row = document.createElement('tr');
+
+      row.className = "animate-row"; // riga 135: CSS Animation
+
+      row.innerHTML = "<td>" + matchResult.title + "</td><td>" + matchResult.location + "</td>";
+      tableBody.appendChild(row);
+    }
+  }
+}
