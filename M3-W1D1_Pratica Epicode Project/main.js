@@ -32,7 +32,7 @@ function removeTwitterLink() {
 function removeElementOnClick() {
     const linkContinua = document.querySelectorAll("a");
 
-    for (let j = 0; i < linkContinua.length; j++) {
+    for (let j = 0; j < linkContinua.length; j++) {
         if (linkContinua[j].textContent.includes("Continua a leggere")) {
             linkContinua[j].addEventListener('click', function removePadre(event) {
                 event.preventDefault(); // Impedisce al link di ricaricare la pagina o saltare in alto
