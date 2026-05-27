@@ -26,7 +26,7 @@ function removeTwitterLink() {
         }
     }
 }
-// removeTwitterLink();
+removeTwitterLink();
 
 // EXTRA 2: Rimuovere l'elemento padre con onClick sul link "Continua a leggere"
 function removeElementOnClick() {
@@ -37,7 +37,7 @@ function removeElementOnClick() {
             linkContinua[j].addEventListener('click', function removePadre(event) {
                 event.preventDefault(); // Impedisce al link di ricaricare la pagina o saltare in alto
 
-                const boxToRemove = event.target.closest(".jumbotron .row.no.gutters");
+                const boxToRemove = event.target.closest(".jumbotron, .row.no-gutters");
                 if (boxToRemove) {
                     boxToRemove.remove();
                 }
