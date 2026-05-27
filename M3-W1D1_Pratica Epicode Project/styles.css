@@ -1,0 +1,79 @@
+.bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+/* ES 1: Selettore per <h1> nella sezione "hero" chiamato classe="jumbotron" */
+.jumbotron h1 {
+    color: #333;
+}
+
+/* ES 2: Selettore per TUTTI * i figli dell'elemento <nav> */
+nav.nav > * {
+ font-weight: bold;
+}
+
+/* ES 3: Selettore per il link "Continua a leggere" del classe="jumbotron" */
+.jumbotron p.lead.mb-0 a {
+    text-decoration: underline;
+}
+
+/* ES 4: Selettore per il PRIMO classe=".blog-post" */
+.blog-post:first-of-type {
+    background-color: rgb(237, 237, 237);
+}
+
+/* ES 5: Selettore per <hr> del PRIMO classe="blog-post", colorando di RED */
+.blog-post:first-of-type hr {
+    border-top: 1px solid red;
+}
+
+/* ES 6: Selettore per i LINK  */
+nav.nav span:nth-child(even) {
+    color: crimson
+}
+
+/* ES 7: Selettore per tutti gli <li> della prima "ordered-list" della sidebar ("Archivio") */
+.blog-sidebar .p-4:nth-of-type(2) ol li {
+    list-style-type: square;
+    color: rebeccapurple;
+}
+
+/* ES 8: Selettore per l'autore del SECONDO blog post */
+.blog-post:nth-of-type(2) .blog-post-meta a {
+    color: darkgoldenrod;
+}
+
+/* ES 9: Selettore per il secondo <li> della lista del TERZO blog post  */
+.blog-post:nth-of-type(3) ul li:nth-child(2) {
+    color: green;
+}
+
+/* ES 10: Selettore per il link "Torna su" in basso a destra */
+a.float-right.mb-3.mr-3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: crimson;
+    border: 1px solid crimson;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+/* ES 11: Selettore per il botton "Nuovi" che si trova in basso a sinistra */
+.blog-pagination a.btn-outline-secondary {
+    border-color: black;
+}
+
+/* ES 12: Selettore per il secondo link del footer */
+.blog-footer p a:nth-of-type(2) {
+    color: brown;
+}
