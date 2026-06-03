@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Album</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="./assets/devByPau-favicon.jpg" type="image/jpeg"/>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#main-navbar" data-bs-offset="120">
+
+  <div class="ambient-glow"></div>
+
+  <nav id="main-navbar" class="navbar navbar-expand-lg navbar-dark navbar-glass sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-uppercase tracking-wider fs-4" href="#">
+        ZACK <span class="accent-text">TABUDLO</span>
+      </a>
+      
+      <button class="navbar-toggler custom-toggler-btn border-0 d-flex d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a id="nav-link-favorites" class="nav-link" href="#favorites">Favorites</a>
+          </li>
+          <li class="nav-item">
+            <a id="nav-link-spotlight" class="nav-link" href="#featured-album">Spotlight Breakdowns</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="py-5">
+
+    <section id="favorites" class="container mb-5 pb-5">
+      <div class="row mb-4 align-items-end">
+        <div class="col">
+          <h2 class="fw-bold tracking-tight mb-1 text-white">Your Favorites</h2>
+          <p class="custom-muted-text small text-uppercase tracking-widest mb-0">Your collection album</p>
+        </div>
+        
+        <div class="col-auto">
+          <button id="toggle-favorites-btn" class="btn btn-apple-toggle d-flex align-items-center gap-2">
+            <span id="btn-text-node">Hide Collection</span>
+            <ion-icon id="btn-icon-node" name="eye-outline"></ion-icon>
+          </button>
+        </div>
+      </div>
+
+      <div id="favorites-collapse-wrapper" class="smooth-collapse-container">
+        <div class="row gy-4 gx-4 pt-2" id="album-grid-container">
+          </div>
+      </div>
+    </section>
+
+    <section id="featured-album" class="container py-5">
+      <div class="row">
+        <div class="col-12">
+          <div class="spotlight-panel p-4 p-md-5 shadow-2xl">
+
+            <div class="row align-items-center g-5">
+            
+            
+              <div class="col-12 col-md-5 text-center">
+                <a href="https://www.youtube.com/watch?v=iqXgYTPvMf8&list=OLAK5uy_nb18CmCh2xrWV-CmBrd1UuWTNB6mrsycQ" target="_blank">
+                  <img src="./assets/EPISODE-albumCover.png" alt="Zack Tabudlo EPISODE Album Cover" class="img-fluid rounded-3 main-cover-album">
+                </a>
+              </div>
+            
+              <div class="col-12 col-md-7">
+
+                <span class="text-uppercase tracking-widest accent-text small fw-bold mb-2 d-inline-block">Currently Playing</span>
+                <h1 class="display-4 fw-bold mb-1 tracking-tight text-white">Episode</h1>
+                <p class="fs-5 custom-muted-text mb-4">Studio Release by <span class="text-white fw-semibold">Zack Tabudlo</span></p>
+                
+                <div class="d-flex flex-wrap gap-2 mb-4">
+                  <span class="badge rounded-pill bg-dark border border-secondary text-white px-3 py-2 fs-7">Pop / R&B</span>
+                  <span class="badge rounded-pill bg-dark border border-secondary text-white px-3 py-2 fs-7">54 Minutes Total</span>
+                  <span class="badge rounded-pill bg-dark border border-secondary text-white px-3 py-2 fs-7">Released 2021</span>
+                </div>
+
+                <h5 class="fw-bold mb-3 tracking-tight text-white">Tracklist Preview</h5>
+                
+                <div class="list-group border-0">
+
+                <a href="https://www.youtube.com/watch?v=INvHma-qltE" class="text-white text-decoration-none" target="_blank">
+                  <div class="list-group-item custom-track-item d-flex justify-content-between align-items-center px-3">
+                    <span class="fw-semibold text-white">1. Binibini</span>
+                    <span class="custom-muted-text small">3:50</span>
+                  </div>
+                </a>
+
+                <a href="https://www.youtube.com/watch?v=RkX3iiI317k" class="text-white text-decoration-none" target="_blank">
+                  <div class="list-group-item custom-track-item d-flex justify-content-between align-items-center px-3">
+                    <span class="fw-semibold text-white">2. Habang Buhay</span>
+                    <span class="custom-muted-text small">5:14</span>
+                  </div>
+                </a>
+
+                <a href="https://www.youtube.com/watch?v=9dZTNlPNHkM" class="text-white text-decoration-none" target="_blank">
+                  <div class="list-group-item custom-track-item d-flex justify-content-between align-items-center px-3">
+                    <span class="fw-semibold text-white">3. Nangangamba</span>
+                    <span class="custom-muted-text small">3:40</span>
+                  </div>
+                </a>
+
+                </div>
+
+                <div class="mt-4 p-3 rounded-3 prod-insight">
+                  <p class="small mb-0 custom-muted-text">
+                    <span class="text-white fw-semibold">Production Insight:</span> "Episode" served as Zack Tabudlo's massive breakthrough debut studio album under Island Records Philippines, combining heartbreak themes with polished retro-pop beats.
+                  </p>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="text-center py-5 border-top border-secondary-subtle footer">
+    <p class="mb-0 small custom-muted-text">&copy; 2026 Zack Tabudlo Experience. Designed by devByPau using <span class="fw-bolder text-white"> Bootstrap</span> & <span class="fw-bolder text-white">Ionicons</span></p>
+  </footer>
+
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="./main.js"></script>
+  <script src="./js/bootstrap.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,212 @@
+/* Dynamic Theme Overrides using modern CSS Variables */
+:root {
+  --spotify-black: #121212;
+  --spotify-card: #1a1a1a;        /* Slightly lighter charcoal for distinct card contrast */
+  --spotify-card-hover: #262626;  /* High-contrast hover background */
+  --apple-accent: #ff3b7e;        /* Enhanced bright pink accent */
+  --text-high-contrast: #ffffff;  /* Pure crisp white for primary headers */
+  --text-mid-contrast: #b3b3b3;   /* Bright silver/gray for secondary metadata */
+  --smooth-transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* custom scroll bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+body {
+  background-color: var(--spotify-black);
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  letter-spacing: -0.015em;
+  position: relative;
+}
+
+/* Ambient Glow Background Element */
+.ambient-glow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80vw;
+  height: 45vh;
+  background: radial-gradient(circle, rgba(255, 59, 126, 0.15) 0%, rgba(18, 18, 18, 0) 70%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Sticky Glassmorphism Navigation Bar */
+.navbar.navbar-glass {
+  background-color: rgba(18, 18, 18, 0.8);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Customized Premium Ionicons Hamburger Button */
+.navbar-toggler.custom-toggler-btn {
+  padding: 4px 8px;
+  font-size: 1.8rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-glass .navbar-nav .nav-link {
+  color: #8a8a8e;       
+  font-weight: 500;     
+  font-size: 0.95rem;              
+  border-bottom: none;  
+  text-decoration: none;
+  padding: 6px 12px;
+  transition: var(--smooth-transition);
+}
+
+.navbar-glass .navbar-nav .nav-link:hover,
+.navbar-glass .navbar-nav .nav-link.active {
+  color: #ffffff;       
+  background-color: transparent; 
+}
+
+/* Smooth Expansion System for Collapsible Content Container */
+.smooth-collapse-container {
+  max-height: 2000px; 
+  opacity: 1;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.4s ease-out;
+}
+
+.smooth-collapse-container.is-hidden {
+  max-height: 0px;
+  opacity: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Apple-Style Action Toggle Button */
+.btn.btn-apple-toggle {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 8px 18px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: var(--smooth-transition);
+    }
+
+    .btn.btn-apple-toggle:hover {
+      background-color: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .btn.btn-apple-toggle:active {
+      transform: scale(0.96);
+    }
+
+    /* Premium Icon Alignments inside Buttons */
+    .btn-apple-toggle ion-icon {
+      font-size: 1.15rem;
+    }
+
+    /* Spotify Card Aesthetic Modifications */
+    .card.album-card {
+      background-color: var(--spotify-card);
+      border: none;
+      border-radius: 10px;
+      padding: 16px;
+      transition: var(--smooth-transition);
+    }
+    
+    .card.album-card:hover {
+      background-color: var(--spotify-card-hover);
+      transform: translateY(-8px);
+    }
+
+    .card-img-container {
+      position: relative;
+      width: 100%;
+      padding-top: 100%; 
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+    }
+
+    .card-img-container img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--smooth-transition);
+    }
+
+    .card.album-card:hover .card-img-container img {
+      transform: scale(1.04);
+    }
+
+    /* Spotlight Section Panel Styles */
+    .spotlight-panel {
+      background: linear-gradient(180deg, #1c1c1e 0%, var(--spotify-black) 100%);
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    /* Cleaned up List items without override flags */
+    .list-group-item.custom-track-item {
+      background-color: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      color: #ffffff;
+      margin-bottom: 8px;
+      border-radius: 6px;
+      transition: var(--smooth-transition);
+    }
+
+    .list-group-item.custom-track-item:hover {
+      background-color: rgba(255, 255, 255, 0.06);
+    }
+
+    .accent-text {
+      color: var(--apple-accent);
+    }
+
+    .custom-muted-text {
+      color: #b3b3b3;
+    }
+
+
+.main-cover-album {
+  max-width: 360px;
+  width: 100%;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.75);
+}
+
+.prod-insight {
+  background-color: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer {
+  background-color: #0b0b0c;
+}
