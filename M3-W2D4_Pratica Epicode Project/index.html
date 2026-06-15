@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Travel Agency</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="./assets/devByPau-favicon.jpg" type="image/jpeg"/>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#main-navbar" data-bs-offset="110">
+
+    <nav id="main-navbar" class="navbar navbar-expand-lg fixed-top glass-nav">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="./assets/epicode-logo.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top rounded-circle me-2">
+                <span class="fw-bold">Epicode Bootstrap Travel Agency</span>
+            </a>
+            <button id="navbar-toggle-btn" class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <ion-icon name="menu-outline" class="fs-1"></ion-icon>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#offer-week">Week's Offer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#welcome-summer">Summer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#offer-day">Deal of the Day</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#last-minute">Last Minute</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="container mt-5 pt-5">
+        <div class="p-5 mb-4 rounded-4 apple-jumbotron text-center">
+            <div class="container-fluid py-5">
+                <h1 class="display-4 fw-bold apple-text-primary">Discover the World</h1>
+                <p class="col-md-8 mx-auto fs-4 apple-text-secondary">Explore places you've always dreamed</p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <button id="btn-explore" class="btn btn-dark btn-lg rounded-pill px-4 mt-3">Start Exploring</button>
+                    <button id="btn-clear-cards" class="btn btn-apple-danger btn-lg rounded-pill px-4 mt-3">Clear Cards</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="offer-week" class="apple-section"> <!-- class="mb-5 pt-4" -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="fw-bold m-0">Offer of the Week</h2>
+                <button class="btn btn-light rounded-circle collapse-btn" data-target="offer-week-content">
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                </button>
+            </div>
+            <div id="offer-week-content" class="apple-collapse">
+                <div class="apple-collapse-inner">
+                    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
+                        <div class="col">
+                            <div class="card h-100 apple-card border-0">
+                                <img src="./assets/newYork.png" class="card-img-top" alt="New York">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bold">New York</h5>
+                                    <p class="card-text apple-text-secondary">City that never sleeps</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 apple-card border-0">
+                                <img src="./assets/parisFrance.png" class="card-img-top" alt="Paris">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bold">Paris</h5>
+                                    <p class="card-text apple-text-secondary">City of love</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 apple-card border-0">
+                                <img src="./assets/tokyoJapan.jpg" class="card-img-top" alt="Tokyo">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bold">Japan, Tokyo</h5>
+                                    <p class="card-text apple-text-secondary">Neon lights & tradition</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 apple-card border-0">
+                                <img src="./assets/londanEngland.jpg" class="card-img-top" alt="London">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bold">London</h5>
+                                    <p class="card-text apple-text-secondary">History meets modern</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="welcome-summer" class="apple-section"> <!-- class="mb-5 pt-4" -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="fw-bold m-0">Welcome Summer</h2>
+                <button class="btn btn-light rounded-circle collapse-btn" data-target="welcome-summer-content">
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                </button>
+            </div>
+
+            <div id="welcome-summer-content" class="apple-collapse">
+                <div class="apple-collapse-inner">
+                    <div class="shadow-buffer"> <!-- NEW DIV -->
+                        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-3">
+                            <div class="col"><div class="card apple-card shadow border-0"><img src="./assets/greeceSantorini.jpg" class="card-img-top" alt="Greece, Santorini"><div class="card-body p-2"><p class="m-0 fw-bold">Greece</p></div></div></div>
+                            <div class="col"><div class="card apple-card shadow border-0"><img src="./assets/barcelonaSpain.jpg" class="card-img-top" alt="Barcelona, Spain"><div class="card-body p-2"><p class="m-0 fw-bold">Spain</p></div></div></div>
+                            <div class="col"><div class="card apple-card shadow border-0"><img src="./assets/seoul-southKorea.jpg" class="card-img-top" alt="Seoul, South Korea"><div class="card-body p-2"><p class="m-0 fw-bold">South Korea</p></div></div></div>
+                            <div class="col"><div class="card apple-card shadow border-0"><img src="./assets/switzerland-Iseltwald-Pier.jpg" class="card-img-top" alt="Iseltwald, Switzerland"><div class="card-body p-2"><p class="m-0 fw-bold">Switzerland</p></div></div></div>
+                            <div class="col"><div class="card apple-card shadow border-0"><img src="./assets/italyRome.jpg" class="card-img-top" alt="Rome, Italy"><div class="card-body p-2"><p class="m-0 fw-bold">Italy</p></div></div></div>
+                            <div class="col"><div class="card apple-card shadow border-0"><img src="./assets/parisFrance.png" class="card-img-top" alt="Paris, France"><div class="card-body p-2"><p class="m-0 fw-bold">France</p></div></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="offer-day" class="apple-section"> <!-- class="mb-5 pt-4 d-none d-md-block" -->
+            <div class="d-none d-md-block"> <!-- class="d-flex justify-content-between align-items-center mb-4" -->
+                
+                <div class="d-flex justify-content-between align-items-center mb-4"> <!-- added DIV -->
+                    <h2 class="fw-bold m-0">Deal of the Day</h2> 
+                    <button class="btn btn-light rounded-circle collapse-btn" data-target="offer-day-content">
+                        <ion-icon name="chevron-down-outline"></ion-icon>
+                    </button>
+                </div>
+
+            
+                <div id="offer-day-content" class="apple-collapse">
+                    <div class="apple-collapse-inner">
+                        <div class="row bg-light rounded-4 overflow-hidden shadow-sm">
+
+                            <div class="col-8 p-0">
+                                <img src="./assets/tromsoNorway-auroraBorealis.jpg" class="img-fluid w-100 h-100 object-fit-cover deal-img" alt="Tromso Norway">
+                            </div>
+
+                            <div class="col-md-4 p-4 p-md-5 d-flex flex-column justify-content-center">
+                                <h3 class="fw-bold">Tromsø, Norway</h3>
+                                <p class="text-muted">Dec 10 - Dec 17</p>
+                                <h4 class="fw-bold mt-2">€1,299 <small class="fs-6 fw-normal text-muted">/pax</small></h4>
+                                <p class="mt-3 apple-text-secondary">Experience the magic of the Aurora Borealis in one of the most stunning locations on Earth.</p>
+                                <button class="btn btn-dark rounded-pill mt-3">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="last-minute" class="apple-section"> <!-- class="mb-5 pt-4" -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="fw-bold m-0">Last Minute</h2>
+                <button class="btn btn-light rounded-circle collapse-btn" data-target="last-minute-content">
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                </button>
+            </div>
+            <div id="last-minute-content" class="apple-collapse">
+                <div class="apple-collapse-inner">
+                    <div class="row row-cols-2 row-cols-md-4 g-4">
+                        <div class="col"><img src="./assets/indonesiaBali.jpg" class="img-fluid last-minute-img shadow-sm" alt="Bali, Indonesia"></div>
+                        <div class="col"><img src="./assets/boholPhilippines.jpg" class="img-fluid last-minute-img shadow-sm" alt="Bohol, Philippines"></div>
+                        <div class="col"><img src="./assets/vietnam.jpg" class="img-fluid last-minute-img shadow-sm" alt="Vietnam"></div>
+                        <div class="col"><img src="./assets/palawanPhilippines.jpg" class="img-fluid last-minute-img shadow-sm" alt="Palawan, Philippines"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="apple-section"> <!-- class="mb-5 pt-4" -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="fw-bold m-0">Testimonials</h2>
+                <button class="btn btn-light rounded-circle collapse-btn" data-target="testimonials-content">
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                </button>
+            </div>
+            <div id="testimonials-content" class="apple-collapse">
+                <div class="apple-collapse-inner">
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                        <div class="col">
+                            <div class="p-4 bg-light rounded-4 h-100">
+                                <ion-icon name="star" class="text-warning"></ion-icon><ion-icon name="star" class="text-warning"></ion-icon><ion-icon name="star" class="text-warning"></ion-icon><ion-icon name="star" class="text-warning"></ion-icon><ion-icon name="star" class="text-warning"></ion-icon>
+                                <p class="mt-3 apple-text-secondary">"The trip to Norway was life-changing. Everything was handled perfectly by the agency."</p>
+                                <h6 class="fw-bold">- Sarah J.</h6>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="p-4 bg-light rounded-4 h-100">
+                                <ion-icon name="star" class="text-warning"></ion-icon><ion-icon name="star" class="text-warning"></ion-icon><ion-icon name="star" class="text-warning"></ion-icon><ion-icon name="star" class="text-warning"></ion-icon><ion-icon name="star-half" class="text-warning"></ion-icon>
+                                <p class="mt-3 apple-text-secondary">"Loved the quick last-minute deals. Saved a lot and had a great time in Paris."</p>
+                                <h6 class="fw-bold">- Marco V.</h6>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="p-4 bg-light rounded-4 h-100">
+                                <ion-icon name="star" class="text-warning"></ion-icon><ion-icon name="star" class="text-warning"></ion-icon><ion-icon name="star" class="text-warning"></ion-icon><ion-icon name="star" class="text-warning"></ion-icon><ion-icon name="star" class="text-warning"></ion-icon>
+                                <p class="mt-3 apple-text-secondary">"Highly recommend the summer destinations. Greece was absolutely breathtaking."</p>
+                                <h6 class="fw-bold">- Emily R.</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container text-center">
+            <h4 class="fw-bold">Epicode Agency</h4>
+            <p class="text-white-50">Making your dream into reality.</p>
+            <div class="d-flex justify-content-center gap-3 my-4">
+                <button id="btn-contact-us" class="btn btn-light rounded-pill px-4 fw-bold text-dark">Contact Us</button>
+                <button id="btn-count-trips" class="btn btn-outline-light rounded-pill px-4 fw-bold">Count Trips</button>
+            </div>
+            <p class="text-white-50 small">&copy;Epicode Bootstrap Travel Agency. All rights reserved 2026.</p>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 border-0">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold" id="contactModalLabel">Get in Touch</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pb-4">
+                    <p class="apple-text-secondary">Leave your email below and our agents will reach out to perfect itinerary.</p>
+                    <div class="mb-3">
+                        <label for="userEmail" class="form-label fw-semibold">Email address</label>
+                        <input type="email" class="form-control rounded-3 py-2" id="userEmail" placeholder="name@example.it">
+                    </div>
+                    <div class="mb-3">
+                        <label for="userMessage" class="form-label fw-semibold">Message</label>
+                        <textarea class="form-control rounded-3" id="userMessage" rows="3" placeholder="Where do you want to go"></textarea>
+                    </div>
+                    <button type="button" class="btn btn-dark w-100 rounded-pill py-2 fw-bold">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+    <script src="./js/bootstrap.bundle.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
