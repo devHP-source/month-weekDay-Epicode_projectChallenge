@@ -1,0 +1,1926 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course Mockup M3W3</title>
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" href="./assets/logo.svg" type="image/svg+xml"/>
+  </head>
+  <body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom py-3">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="./assets/logo.svg" alt="Geeks UI Logo" class="rounded-circle logo-fluid" width="40" height="40"/>
+        </a>
+
+        <div class="d-flex align-items-center d-lg-none gap-3 ms-auto me-2">
+
+          <a href="#" class="position-relative d-inline-flex align-items-center justify-content-center notification-wrapper p-2 rounded-circle" aria-label="Notifications">
+            <ion-icon name="notifications-outline" class="fs-5 text-secondary"></ion-icon>
+            <span class="position-absolute bg-danger border border-light rounded-circle notification-dot-inner"></span>
+          </a>
+          
+          <div class="dropdown-wrapper position-relative d-inline-block">
+            <a href="#" class="profile-toggle-btn d-block position-relative text-decoration-none" aria-label="Toggle Profile Menu">
+              <img src="./assets/avatar-1.jpg" alt="User Profile" class="rounded-circle" width="32" height="32"/> <!-- USER PROFILE -->
+              <span class="profile-online-dot position-absolute bottom-0 end-0 rounded-circle"></span>
+            </a>
+
+            <div class="custom-profile-dropdown shadow-lg rounded bg-white mt-2">
+              <div class="dropdown-header d-flex align-items-center p-3 border-bottom">
+                <img src="./assets/avatar-1.jpg" alt="User Avatar" class="rounded-circle me-3" width="45" height="45" /> <!-- DROPDOWN USER PROFILE: EXTRA EXERCISE -->
+                <div class="d-flex flex-column">
+                  <span class="text-dark fw-bold mb-0 lh-1">Annette Black</span>
+                  <span class="text-secondary fw-bold small-text mt-1">annette@geeksui.com</span>
+                </div>
+              </div>
+
+              <ul class="list-unstyled mb-0 py-2">
+                <li>
+                  <a href="#" class="dropdown-item d-flex align-items-center gap-2 px-3 py-2 text-dark text-decoration-none">
+                    <ion-icon name="person-outline" class="fs-5"></ion-icon> Profile
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="dropdown-item d-flex align-items-center gap-2 px-3 py-2 text-dark text-decoration-none">
+                    <ion-icon name="star-outline" class="fs-5"></ion-icon> Subscription
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="dropdown-item d-flex align-items-center gap-2 px-3 py-2 text-dark text-decoration-none">
+                    <ion-icon name="settings-outline" class="fs-5"></ion-icon> Settings
+                  </a>
+                </li>
+                <li class="border-top mt-2 pt-2">
+                  <a href="#" class="dropdown-item d-flex align-items-center gap-2 px-3 py-2 text-dark text-decoration-none">
+                    <ion-icon name="log-out-outline" class="fs-5"></ion-icon> Sign Out
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+
+        <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <ion-icon name="menu-outline" class="fs-1 text-dark"></ion-icon>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav align-items-lg-center me-auto ms-lg-4 gap-1 gap-lg-3 mb-2 mb-lg-0">
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-dark fw-medium d-flex align-items-center gap-1 custom-dropdown-link" href="#" id="browseDrop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Browse
+                <ion-icon name="chevron-down-outline" class="dropdown-chevron-icon"></ion-icon>
+              </a>
+              <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="browseDrop">
+                <li><a class="dropdown-item" href="#">Web Development</a></li>
+                <li><a class="dropdown-item" href="#">Data Science</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-dark fw-medium d-flex align-items-center gap-1 custom-dropdown-link" href="#" id="landingsDrop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Landings
+                <ion-icon name="chevron-down-outline" class="dropdown-chevron-icon"></ion-icon>
+              </a>
+              <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="landingsDrop">
+                <li><a class="dropdown-item" href="#">Courses Home</a></li>
+                <li><a class="dropdown-item" href="#">Lead Generation</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-dark fw-medium d-flex align-items-center gap-1 custom-dropdown-link" href="#" id="pagesDrop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Pages
+                <ion-icon name="chevron-down-outline" class="dropdown-chevron-icon"></ion-icon>
+              </a>
+              <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="pagesDrop">
+                <li><a class="dropdown-item" href="#">About Us</a></li>
+                <li><a class="dropdown-item" href="#">Pricing Matrix</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-dark fw-medium d-flex align-items-center gap-1 custom-dropdown-link" href="#" id="accountsDrop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Accounts
+                <ion-icon name="chevron-down-outline" class="dropdown-chevron-icon"></ion-icon>
+              </a>
+              <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="accountsDrop">
+                <li><a class="dropdown-item" href="#">Instructor Profile</a></li>
+                <li><a class="dropdown-item" href="#">Student Dashboard</a></li>
+              </ul>
+            </li>
+
+          </ul>
+
+          <div class="navbar-nav align-items-center d-none d-lg-flex gap-3">
+            <a href="#" class="position-relative d-flex notification-wrapper p-2 rounded-circle" aria-label="Notifications">
+              <ion-icon name="notifications-outline" class="fs-4 text-secondary"></ion-icon>
+              <span class="position-absolute top-0 end-0 mt-1 me-1 p-1 bg-danger border border-light rounded-circle"></span>
+            </a>
+            
+            <div class="dropdown-wrapper position-relative d-inline-block">
+              <a href="#" class="profile-toggle-btn d-block position-relative text-decoration-none" aria-label="Toggle Profile Menu">
+                <img src="./assets/avatar-1.jpg" alt="User Profile Status Headshot" class="rounded-circle border" width="40" height="40"/>
+                <span class="profile-online-dot position-absolute bottom-0 end-0 rounded-circle"></span>
+              </a>
+              <div class="custom-profile-dropdown shadow-lg rounded bg-white mt-2">
+                <div class="dropdown-header d-flex align-items-center p-3 border-bottom">
+                  <img src="./assets/avatar-1.jpg" alt="User Avatar" class="rounded-circle me-3" width="45" height="45" />
+                  <div class="d-flex flex-column">
+                    <span class="text-dark fw-bold mb-0 lh-1">Stella Flores</span>
+                    <span class="text-secondary fw-bold small-text mt-1">stella@geeksui.com</span>
+                  </div>
+                </div>
+                <ul class="list-unstyled mb-0 py-2">
+                  <li>
+                    <a href="#" class="dropdown-item d-flex align-items-center gap-2 px-3 py-2 text-dark text-decoration-none">
+                      <ion-icon name="person-outline" class="fs-5"></ion-icon> Profile
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown-item d-flex align-items-center gap-2 px-3 py-2 text-dark text-decoration-none">
+                      <ion-icon name="star-outline" class="fs-5"></ion-icon> Subscription
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown-item d-flex align-items-center gap-2 px-3 py-2 text-dark text-decoration-none">
+                      <ion-icon name="settings-outline" class="fs-5"></ion-icon> Settings
+                    </a>
+                  </li>
+                  <li class="border-top mt-2 pt-2">
+                    <a href="#" class="dropdown-item d-flex align-items-center gap-2 px-3 py-2 text-dark text-decoration-none">
+                      <ion-icon name="log-out-outline" class="fs-5"></ion-icon> Sign Out
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <header class="hero-section text-white overflow-hidden"> <!-- HERO SECTION -->
+        <div class="container">
+          <div class="row align-items-stretch g-0">
+            <div class="col-12 col-lg-6 text-center text-lg-start py-5 pe-lg-4 d-flex flex-column justify-content-center">
+              <h1 class="display-4 fw-bold lh-sm mb-3">Welcome Web Students!</h1> <!-- HERO TITLE -->
+              <p class="lead mb-4 fs-5 hero-paragraph-text">
+                Hand-picked Instructors and expertly crafted,
+                courses, designed for the modern students and
+                entrepreneur.
+              </p>
+              <div class="d-flex flex-row justify-content-start gap-2 gap-sm-3"> <!-- HERO CTA BUTTONS -->
+                <button class="btn btn-custom-green px-3 py-2 px-lg-4 py-lg-3 shadow-sm">Browse Courses</button>
+                <button class="btn btn-action-white px-3 py-2 px-lg-4 py-lg-3">Are You an Instructor?</button>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6 text-center d-flex align-items-stretch justify-content-center position-relative">
+              <img src="./assets/hero-img.png" alt="Hero Banner Image" class="hero-img-flush"/>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="features-bar-container w-100 bg-white border-bottom py-2 py-md-3"> <!-- FEATURES OFFERS -->
+        <div class="container">
+          <div class="row g-3">
+            <div class="col-12 col-md-4 d-flex align-items-center gap-3">
+              <div class="feature-icon-wrapper rounded-circle d-flex align-items-center justify-content-center p-3">
+                <ion-icon name="videocam-outline" class="fs-3 custom-feature-icon"></ion-icon>
+              </div>
+              <div>
+                <h3 class="fs-5 fw-bold text-dark mb-0">30,000 online courses</h3>
+                <p class="text-muted mb-0 small-text">Enjoy a variety of fresh topics</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 d-flex align-items-center gap-3">
+              <div class="feature-icon-wrapper rounded-circle d-flex align-items-center justify-content-center p-3">
+                <ion-icon name="people-outline" class="fs-3 custom-feature-icon"></ion-icon>
+              </div>
+              <div>
+                <h3 class="fs-5 fw-bold text-dark mb-0">Expert instruction</h3>
+                <p class="text-muted mb-0 small-text">Find the right instructor for you</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 d-flex align-items-center gap-3">
+              <div class="feature-icon-wrapper rounded-circle d-flex align-items-center justify-content-center p-3">
+                <ion-icon name="time-outline" class="fs-3 custom-feature-icon"></ion-icon>
+              </div>
+              <div>
+                <h3 class="fs-5 fw-bold text-dark mb-0">Lifetime access</h3>
+                <p class="text-muted mb-0 small-text">Learn on your schedule</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RECOMMENDED COURSES SECTION -->
+      <section class="course-showcase-section py-5 dynamic-deck-section"> <!-- RECOMMENDED COURSES SECTION -->
+        <div class="container pt-2">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="fs-3 text-dark mb-0">Recommended for you</h2>
+          </div>
+          <div class="custom-carousel-container">
+            <div id="courseCarouselEngine" class="carousel slide" data-bs-ride="false" data-bs-interval="false">
+              <div class="carousel-inner dynamic-carousel-target">
+                <!-- <div id="carouselCardsPool" class="d-none"> -->
+              </div>
+              <!-- CAROUSEL CONTROLS -->
+              <button class="carousel-control-prev custom-carousel-arrow" type="button" data-bs-target="#courseCarouselEngine" data-bs-slide="prev"> <!-- CAROUSEL PREVIOUS BUTTON -->
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span> 
+              </button>
+              <button class="carousel-control-next custom-carousel-arrow" type="button" data-bs-target="#courseCarouselEngine" data-bs-slide="next"> <!-- CAROUSEL NEXT BUTTON -->
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span> 
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row d-none carousel-cards-pool"> <!-- CAROUSEL CARDS of RECOMMENDED COURSES-->
+
+          <div class="col"> <!-- GraphQL CARD -->
+            <div class="card h-100 border-0 shadow-sm course-card overflow-hidden">
+              <div class="position-relative">
+                <img src="./assets/course-graphql.jpg" class="card-img-top" alt="GraphQL course logo"/>
+              </div>
+              <div class="card-body p-3">
+                <h3 class="card-title fs-6 mb-2 text-dark line-clamp-2">
+                  GraphQL: introduction to graphQL for beginners
+                </h3>
+                <div class="d-flex align-items-center gap-1 flex-wrap text-muted small-text mb-3">
+                  <ion-icon name="time-outline"></ion-icon>
+                  <span>2h 40m</span>
+                  <span class="mx-1">•</span>
+                  <span class="badge bg-light-danger text-danger px-2 py-1 rounded font-weight-bold">Advance</span>
+                </div>
+                <div class="d-flex align-items-center gap-1 mb-3">
+                  <div class="text-warning d-flex gap-05 fs-6">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-half"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                  </div>
+                  <span class="text-warning small-text ms-1">2.5</span>
+                  <span class="text-muted xs-text">(1,500)</span>
+                </div>
+                
+                <div class="d-flex align-items-center mb-0">
+                    <span class="fw-bold text-dark fs-5">$500</span>
+                    <span class="text-secondary fw-bold text-decoration-line-through small-text ms-2">$850</span>
+                </div>
+                <div class="card-extra-info small-text text-muted">
+                  Learn how to build modern APIs with GraphQL. 
+                  This course covers queries, mutations, resolvers, and integrating with Node.js backends.
+                </div>
+              </div>
+              <div class="card-footer custom-card-footer bg-transparent border-top px-3 py-3 d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <img src="./assets/avatar-5.jpg" alt="Instructor avatar" class="rounded-circle" width="24" height="24"/>
+                  <span class="text-muted small-text fw-medium">Brooklyn Simmons</span>
+                </div>
+                <button class="btn p-0 bookmark-btn d-flex" type="button" aria-label="Add to bookmarks">
+                  <ion-icon name="bookmark-outline" class="fs-5"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col"> <!-- JavaScript CARD -->
+            <div class="card h-100 border-0 shadow-sm course-card overflow-hidden">
+              <div class="position-relative">
+                <img src="./assets/course-javascript.jpg" class="card-img-top" alt="JavaScript course logo"/>
+              </div>
+              <div class="card-body p-3">
+                <h3 class="card-title fs-6 mb-2 text-dark line-clamp-2">
+                  A Complete Beginner's Guide to JavaScript
+                </h3>
+                <div class="d-flex align-items-center gap-1 flex-wrap text-muted small-text mb-3">
+                  <ion-icon name="time-outline"></ion-icon>
+                  <span>4h 10m</span>
+                  <span class="mx-1">•</span>
+                  <span class="badge bg-light-danger text-danger px-2 py-1 rounded font-weight-bold">Advance</span>
+                </div>
+                <div class="d-flex align-items-center gap-1 mb-3">
+                  <div class="text-warning d-flex gap-05 fs-6">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-half"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                  </div>
+                  <span class="text-warning small-text ms-1">3.5</span>
+                  <span class="text-muted xs-text">(7,500)</span>
+                </div>
+                
+                <div class="d-flex align-items-center mb-0">
+                    <span class="fw-bold text-dark fs-5">$700</span>
+                    <span class="text-secondary fw-bold text-decoration-line-through small-text ms-2">$950</span>
+                </div>
+                <div class="card-extra-info small-text text-muted">
+                  Master the fundamentals of JavaScript.
+                  From basic syntax and variables to advanced ES6 features and DOM manipulation.
+                </div>
+              </div>
+              <div class="card-footer custom-card-footer bg-transparent border-top px-3 py-3 d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <img src="./assets/avatar-1.jpg" alt="Instructor avatar" class="rounded-circle" width="24" height="24"/>
+                  <span class="text-muted small-text fw-medium">Jenny Wilson</span>
+                </div>
+                <button class="btn p-0 bookmark-btn d-flex" type="button" aria-label="Add to bookmarks">
+                  <ion-icon name="bookmark-outline" class="fs-5"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col"> <!-- Node.js CARD -->
+            <div class="card h-100 border-0 shadow-sm course-card overflow-hidden">
+              <div class="position-relative">
+                <img src="./assets/course-node.jpg" class="card-img-top" alt="Node.js course logo"/>
+              </div>
+              <div class="card-body p-3">
+                <h3 class="card-title fs-6 mb-2 text-dark line-clamp-2">
+                  Beginning Node.js, Express & MongoDB Development
+                </h3>
+                <div class="d-flex align-items-center gap-1 flex-wrap text-muted small-text mb-3">
+                  <ion-icon name="time-outline"></ion-icon>
+                  <span>2h 00m</span>
+                  <span class="mx-1">•</span>
+                  <span class="badge bg-light-warning text-warning px-2 py-1 rounded font-weight-bold">Average</span>
+                </div>
+                <div class="d-flex align-items-center gap-1 mb-3">
+                  <div class="text-warning d-flex gap-05 fs-6">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                  </div>
+                  <span class="text-warning small-text ms-1">4.0</span>
+                  <span class="text-muted xs-text">(15,700)</span>
+                </div>
+                
+                <div class="d-flex align-items-center mb-0">
+                    <span class="fw-bold text-dark fs-5">$800</span>
+                    <span class="text-secondary fw-bold text-decoration-line-through small-text ms-2">$1,200</span>
+                </div>
+                <div class="card-extra-info small-text text-muted">
+                  Dive into backend development. Build RESTful APIs, 
+                  manage databases with MongoDB, and deploy your Node.js applications.
+                </div>
+              </div>
+              <div class="card-footer custom-card-footer bg-transparent border-top px-3 py-3 d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <img src="./assets/avatar-3.jpg" alt="Instructor avatar" class="rounded-circle" width="24" height="24"/>
+                  <span class="text-muted small-text fw-medium">Sina Ray</span>
+                </div>
+                <button class="btn p-0 bookmark-btn d-flex" type="button" aria-label="Add to bookmarks">
+                  <ion-icon name="bookmark-outline" class="fs-5"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col"> <!-- Laravel CARD -->
+            <div class="card h-100 border-0 shadow-sm course-card overflow-hidden">
+              <div class="position-relative">
+                <img src="./assets/course-laravel.jpg" class="card-img-top" alt="Laravel course logo"/>
+              </div>
+              <div class="card-body p-3">
+                <h3 class="card-title fs-6 mb-2 text-dark line-clamp-2">
+                  Laravel: The Ultimate Beginner's Guide to Learn
+                </h3>
+                <div class="d-flex align-items-center gap-1 flex-wrap text-muted small-text mb-3">
+                  <ion-icon name="time-outline"></ion-icon>
+                  <span>1h 00m</span>
+                  <span class="mx-1">•</span>
+                  <span class="badge bg-light-success text-success px-2 py-1 rounded font-weight-bold">Beginner</span>
+                </div>
+                <div class="d-flex align-items-center gap-1 mb-3">
+                  <div class="text-warning d-flex gap-05 fs-6">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-half"></ion-icon>
+                  </div>
+                  <span class="text-warning small-text ms-1">4.5</span>
+                  <span class="text-muted xs-text">(2,500)</span>
+                </div>
+                
+                <div class="d-flex align-items-center mb-0">
+                    <span class="fw-bold text-dark fs-5">$170</span>
+                    <span class="text-secondary fw-bold text-decoration-line-through small-text ms-2">$350</span>
+                </div>
+                <div class="card-extra-info small-text text-muted">
+                  The perfect starting point for PHP developers. 
+                  Learn routing, controllers, Blade templates, and Eloquent ORM.
+                </div>
+              </div>
+              <div class="card-footer custom-card-footer bg-transparent border-top px-3 py-3 d-flex align-items-center justify-content-between">
+                <div class="col-9 d-flex align-items-center gap-2 overflow-hidden">
+                  <img src="./assets/avatar-7.jpg" alt="Instructor avatar" class="rounded-circle flex-shrink-0" width="24" height="24"/>
+                  <span class="text-muted small-text fw-medium text-truncate">Sobo Rikhan</span>
+                </div>
+                <button class="btn p-0 bookmark-btn d-flex" type="button" aria-label="Add to bookmarks">
+                  <ion-icon name="bookmark-outline" class="fs-5"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col"> <!-- Python CARD -->
+            <div class="card h-100 border-0 shadow-sm course-card overflow-hidden">
+              <div class="position-relative">
+                <img src="./assets/course-python.jpg" class="card-img-top" alt="Python course graphic"/>
+              </div>
+              <div class="card-body p-3">
+                <h3 class="card-title fs-6 mb-2 text-dark line-clamp-2">
+                  A Complete Beginner's Guide to Python
+                </h3>
+                <div class="d-flex align-items-center gap-1 flex-wrap text-muted small-text mb-3">
+                  <ion-icon name="time-outline"></ion-icon>
+                  <span>16h 20m</span>
+                  <span class="mx-1">•</span>
+                  <span class="badge bg-light-danger text-danger px-2 py-1 rounded font-weight-bold">Advance</span>
+                </div>
+                <div class="d-flex align-items-center gap-1 mb-3">
+                  <div class="text-warning d-flex gap-05 fs-6">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                  <span class="fw-bold text-dark small-text ms-1">5.0</span>
+                  <span class="text-muted xs-text">(856)</span>
+                </div>
+                
+                <div class="d-flex align-items-center mb-0">
+                    <span class="fw-bold text-dark fs-5">$320</span>
+                    <span class="text-secondary fw-bold text-decoration-line-through small-text ms-2">$450</span>
+                </div>
+                <div class="card-extra-info small-text text-muted">
+                  Go from zero to hero in Python. 
+                  We will cover data structures, object-oriented programming, and real-world scripting projects.
+                </div>
+              </div>
+              <div class="card-footer custom-card-footer bg-transparent border-top px-3 py-3 d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <img src="./assets/avatar-4.jpg" alt="Instructor profile image" class="rounded-circle" width="24" height="24"/>
+                  <span class="text-muted small-text fw-medium">Jenny Wilson</span>
+                </div>
+                <button class="btn p-0 bookmark-btn d-flex" type="button" aria-label="Add to bookmarks">
+                  <ion-icon name="bookmark-outline" class="fs-5"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col"> <!-- Angular CARD -->
+            <div class="card h-100 border-0 shadow-sm course-card overflow-hidden">
+              <div class="position-relative">
+                <img src="./assets/course-angular.jpg" class="card-img-top" alt="Angular course graphic"/>
+              </div>
+              <div class="card-body p-3">
+                <h3 class="card-title fs-6 mb-2 text-dark line-clamp-2">
+                  Master Angular: The Complete Developer Guide
+                </h3>
+                <div class="d-flex align-items-center gap-1 flex-wrap text-muted small-text mb-3">
+                  <ion-icon name="time-outline"></ion-icon>
+                  <span>18h 30m</span>
+                  <span class="mx-1">•</span>
+                  <span class="badge bg-light-danger text-danger px-2 py-1 rounded font-weight-bold">Advance</span>
+                </div>
+                <div class="d-flex align-items-center gap-1 mb-3">
+                  <div class="text-warning d-flex gap-05 fs-6">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                  <span class="fw-bold text-dark small-text ms-1">4.8</span>
+                  <span class="text-muted xs-text">(12,400)</span>
+                </div>
+                
+                <div class="d-flex align-items-center mb-0">
+                    <span class="fw-bold text-dark fs-5">$190</span>
+                    <span class="text-secondary fw-bold text-decoration-line-through small-text ms-2">$320</span>
+                </div>
+                <div class="card-extra-info small-text text-muted">
+                  Build scalable enterprise applications using Angular.
+                  Learn components, directives, services, and advanced routing from the ground up.
+                </div>
+              </div>
+              <div class="card-footer custom-card-footer bg-transparent border-top px-3 py-3 d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <img src="./assets/avatar-3.jpg" alt="Instructor profile image" class="rounded-circle" width="24" height="24"/>
+                  <span class="text-muted small-text fw-medium">Robert Fox</span>
+                </div>
+                <button class="btn p-0 bookmark-btn d-flex" type="button" aria-label="Add to bookmarks">
+                  <ion-icon name="bookmark-outline" class="fs-5"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col"> <!-- CSS CARD -->
+            <div class="card h-100 border-0 shadow-sm course-card overflow-hidden">
+              <div class="position-relative">
+                <img src="./assets/course-css.jpg" class="card-img-top" alt="CSS course graphic"/>
+              </div>
+              <div class="card-body p-3">
+                <h3 class="card-title fs-6 mb-2 text-dark line-clamp-2">
+                  CSS3 Bootcamp: Master Web Styling & Animations
+                </h3>
+                <div class="d-flex align-items-center gap-1 flex-wrap text-muted small-text mb-3">
+                  <ion-icon name="time-outline"></ion-icon>
+                  <span>6h 15m</span>
+                  <span class="mx-1">•</span>
+                  <span class="badge bg-light-success text-success px-2 py-1 rounded font-weight-bold">Beginner</span>
+                </div>
+                <div class="d-flex align-items-center gap-1 mb-3">
+                  <div class="text-warning d-flex gap-05 fs-6">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-half"></ion-icon>
+                  </div>
+                  <span class="fw-bold text-dark small-text ms-1">4.5</span>
+                  <span class="text-muted xs-text">(8,200)</span>
+                </div>
+                
+                <div class="d-flex align-items-center mb-0">
+                    <span class="fw-bold text-dark fs-5">$49</span>
+                    <span class="text-secondary fw-bold text-decoration-line-through small-text ms-2">$120</span>
+                </div>
+                <div class="card-extra-info small-text text-muted">
+                  Learn modern CSS3 from scratch. 
+                  Master Flexbox, CSS Grid, complex animations, and mobile-first responsive design principles.
+                </div>
+              </div>
+              <div class="card-footer custom-card-footer bg-transparent border-top px-3 py-3 d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <img src="./assets/avatar-4.jpg" alt="Instructor profile image" class="rounded-circle" width="24" height="24"/>
+                  <span class="text-muted small-text fw-medium">Eleanor Pena</span>
+                </div>
+                <button class="btn p-0 bookmark-btn d-flex" type="button" aria-label="Add to bookmarks">
+                  <ion-icon name="bookmark-outline" class="fs-5"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col"> <!-- GATSBY CARD -->
+            <div class="card h-100 border-0 shadow-sm course-card overflow-hidden">
+              <div class="position-relative">
+                <img src="./assets/course-gatsby.jpg" class="card-img-top" alt="Gatsby course graphic"/>
+              </div>
+              <div class="card-body p-3">
+                <h3 class="card-title fs-6 mb-2 text-dark line-clamp-2">
+                  Build Blazing Fast Websites with Gatsby
+                </h3>
+                <div class="d-flex align-items-center gap-1 flex-wrap text-muted small-text mb-3">
+                  <ion-icon name="time-outline"></ion-icon>
+                  <span>4h 45m</span>
+                  <span class="mx-1">•</span>
+                  <span class="badge bg-light-warning text-warning px-2 py-1 rounded font-weight-bold">Average</span>
+                </div>
+                <div class="d-flex align-items-center gap-1 mb-3">
+                  <div class="text-warning d-flex gap-05 fs-6">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                  </div>
+                  <span class="fw-bold text-dark small-text ms-1">4.0</span>
+                  <span class="text-muted xs-text">(3,100)</span>
+                </div>
+                
+                <div class="d-flex align-items-center mb-0">
+                    <span class="fw-bold text-dark fs-5">$110</span>
+                    <span class="text-secondary fw-bold text-decoration-line-through small-text ms-2">$250</span>
+                </div>
+                <div class="card-extra-info small-text text-muted">
+                  Leverage React and GraphQL to generate incredibly fast static sites. 
+                  Perfect for modern blogs, portfolios, and headless e-commerce.
+                </div>
+              </div>
+              <div class="card-footer custom-card-footer bg-transparent border-top px-3 py-3 d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <img src="./assets/avatar-6.jpg" alt="Instructor profile image" class="rounded-circle" width="24" height="24"/>
+                  <span class="text-muted small-text fw-medium">Jenny Wilson</span>
+                </div>
+                <button class="btn p-0 bookmark-btn d-flex" type="button" aria-label="Add to bookmarks">
+                  <ion-icon name="bookmark-outline" class="fs-5"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col"> <!-- HTML CARD -->
+            <div class="card h-100 border-0 shadow-sm course-card overflow-hidden">
+              <div class="position-relative">
+                <img src="./assets/course-html.jpg" class="card-img-top" alt="HTML course graphic"/>
+              </div>
+              <div class="card-body p-3">
+                <h3 class="card-title fs-6 mb-2 text-dark line-clamp-2">
+                  HTML5 Fundamentals: Build Your First Webpage
+                </h3>
+                <div class="d-flex align-items-center gap-1 flex-wrap text-muted small-text mb-3">
+                  <ion-icon name="time-outline"></ion-icon>
+                  <span>2h 30m</span>
+                  <span class="mx-1">•</span>
+                  <span class="badge bg-light-success text-success px-2 py-1 rounded font-weight-bold">Beginner</span>
+                </div>
+                <div class="d-flex align-items-center gap-1 mb-3">
+                  <div class="text-warning d-flex gap-05 fs-6">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                  <span class="fw-bold text-dark small-text ms-1">5.0</span>
+                  <span class="text-muted xs-text">(22,100)</span>
+                </div>
+                
+                <div class="d-flex align-items-center mb-0">
+                    <span class="fw-bold text-dark fs-5">$29</span>
+                    <span class="text-secondary fw-bold text-decoration-line-through small-text ms-2">$90</span>
+                </div>
+                <div class="card-extra-info small-text text-muted">
+                  The ultimate starting point for web development. 
+                  Understand semantic HTML5 elements, web accessibility, forms, and media tags
+                </div>
+              </div>
+              <div class="card-footer custom-card-footer bg-transparent border-top px-3 py-3 d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <img src="./assets/avatar-8.jpg" alt="Instructor profile image" class="rounded-circle" width="24" height="24"/>
+                  <span class="text-muted small-text fw-medium">Mitson Wilson</span>
+                </div>
+                <button class="btn p-0 bookmark-btn d-flex" type="button" aria-label="Add to bookmarks">
+                  <ion-icon name="bookmark-outline" class="fs-5"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col"> <!-- REACT CARD -->
+            <div class="card h-100 border-0 shadow-sm course-card overflow-hidden">
+              <div class="position-relative">
+                <img src="./assets/course-react.jpg" class="card-img-top" alt="React course graphic"/>
+              </div>
+              <div class="card-body p-3">
+                <h3 class="card-title fs-6 mb-2 text-dark line-clamp-2">
+                  React.js & React Native: The Complete Bootcamp
+                </h3>
+                <div class="d-flex align-items-center gap-1 flex-wrap text-muted small-text mb-3">
+                  <ion-icon name="time-outline"></ion-icon>
+                  <span>24h 00m</span>
+                  <span class="mx-1">•</span>
+                  <span class="badge bg-light-danger text-danger px-2 py-1 rounded font-weight-bold">Advance</span>
+                </div>
+                <div class="d-flex align-items-center gap-1 mb-3">
+                  <div class="text-warning d-flex gap-05 fs-6">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                  <span class="fw-bold text-dark small-text ms-1">4.9</span>
+                  <span class="text-muted xs-text">(45,000)</span>
+                </div>
+                
+                <div class="d-flex align-items-center mb-0">
+                    <span class="fw-bold text-dark fs-5">$299</span>
+                    <span class="text-secondary fw-bold text-decoration-line-through small-text ms-2">$600</span>
+                </div>
+                <div class="card-extra-info small-text text-muted">
+                  Dive deep into the React ecosystem. 
+                  Build dynamic web UIs, manage state with Redux, and master React Hooks in real-world projects.
+                </div>
+              </div>
+              <div class="card-footer custom-card-footer bg-transparent border-top px-3 py-3 d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <img src="./assets/avatar-2.jpg" alt="Instructor profile image" class="rounded-circle" width="24" height="24"/>
+                  <span class="text-muted small-text fw-medium">April Noms</span>
+                </div>
+                <button class="btn p-0 bookmark-btn d-flex" type="button" aria-label="Add to bookmarks">
+                  <ion-icon name="bookmark-outline" class="fs-5"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col"> <!-- WORDPRESS CARD -->
+            <div class="card h-100 border-0 shadow-sm course-card overflow-hidden">
+              <div class="position-relative">
+                <img src="./assets/course-wordpress.jpg" class="card-img-top" alt="WordPress course graphic"/>
+              </div>
+              <div class="card-body p-3">
+                <h3 class="card-title fs-6 mb-2 text-dark line-clamp-2">
+                  WordPress for Beginners: Build a Website Today
+                </h3>
+                <div class="d-flex align-items-center gap-1 flex-wrap text-muted small-text mb-3">
+                  <ion-icon name="time-outline"></ion-icon>
+                  <span>5h 20m</span>
+                  <span class="mx-1">•</span>
+                  <span class="badge bg-light-warning text-warning px-2 py-1 rounded font-weight-bold">Average</span>
+                </div>
+                <div class="d-flex align-items-center gap-1 mb-3">
+                  <div class="text-warning d-flex gap-05 fs-6">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-half"></ion-icon>
+                  </div>
+                  <span class="fw-bold text-dark small-text ms-1">4.2</span>
+                  <span class="text-muted xs-text">(14,300)</span>
+                </div>
+                
+                <div class="d-flex align-items-center mb-0">
+                    <span class="fw-bold text-dark fs-5">$65</span>
+                    <span class="text-secondary fw-bold text-decoration-line-through small-text ms-2">$150</span>
+                </div>
+                <div class="card-extra-info small-text text-muted">
+                  Launch your website or blog without writing code. 
+                  Learn about themes, essential plugins, SEO basics, and the Gutenberg block editor.
+                </div>
+              </div>
+              <div class="card-footer custom-card-footer bg-transparent border-top px-3 py-3 d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <img src="./assets/avatar-7.jpg" alt="Instructor profile image" class="rounded-circle" width="24" height="24"/>
+                  <span class="text-muted small-text fw-medium">Sobo Rikhan</span>
+                </div>
+                <button class="btn p-0 bookmark-btn d-flex" type="button" aria-label="Add to bookmarks">
+                  <ion-icon name="bookmark-outline" class="fs-5"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- MOST POPULAR COURSES SECTION -->
+      <section class="course-showcase-section py-5 bg-light dynamic-deck-section">
+        <div class="container pt-2">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="fs-3 text-dark mb-0">Most Popular</h2>
+          </div>
+          <!-- CAROUSEL CONTROLS -->
+          <div class="custom-carousel-container">
+            <div id="popularCarouselEngine" class="carousel slide" data-bs-ride="false" data-bs-interval="false">
+              <div class="carousel-inner dynamic-carousel-target"></div>
+              <button class="carousel-control-prev custom-carousel-arrow" type="button" data-bs-target="#popularCarouselEngine" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next custom-carousel-arrow" type="button" data-bs-target="#popularCarouselEngine" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row d-none carousel-cards-pool">
+
+          <div class="col"> <!-- HTML CARD -->
+            <div class="card h-100 border-0 shadow-sm course-card overflow-hidden">
+              <div class="position-relative">
+                <img src="./assets/course-html.jpg" class="card-img-top" alt="HTML course graphic"/>
+              </div>
+              <div class="card-body p-3">
+                <h3 class="card-title fs-6 mb-2 text-dark line-clamp-2">
+                  HTML5 Fundamentals: Build Your First Webpage
+                </h3>
+                <div class="d-flex align-items-center gap-1 flex-wrap text-muted small-text mb-3">
+                  <ion-icon name="time-outline"></ion-icon>
+                  <span>2h 30m</span>
+                  <span class="mx-1">•</span>
+                  <span class="badge bg-light-success text-success px-2 py-1 rounded font-weight-bold">Beginner</span>
+                </div>
+                <div class="d-flex align-items-center gap-1 mb-3">
+                  <div class="text-warning d-flex gap-05 fs-6">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                  <span class="fw-bold text-dark small-text ms-1">5.0</span>
+                  <span class="text-muted xs-text">(22,100)</span>
+                </div>
+                
+                <div class="d-flex align-items-center mb-0">
+                    <span class="fw-bold text-dark fs-5">$29</span>
+                    <span class="text-secondary fw-bold text-decoration-line-through small-text ms-2">$90</span>
+                </div>
+                <div class="card-extra-info small-text text-muted">
+                  The ultimate starting point for web development. 
+                  Understand semantic HTML5 elements, web accessibility, forms, and media tags
+                </div>
+              </div>
+              <div class="card-footer custom-card-footer bg-transparent border-top px-3 py-3 d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <img src="./assets/avatar-8.jpg" alt="Instructor profile image" class="rounded-circle" width="24" height="24"/>
+                  <span class="text-muted small-text fw-medium">Miston Wilson</span>
+                </div>
+                <button class="btn p-0 bookmark-btn d-flex" type="button" aria-label="Add to bookmarks">
+                  <ion-icon name="bookmark-outline" class="fs-5"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col"> <!-- JavaScript CARD -->
+            <div class="card h-100 border-0 shadow-sm course-card overflow-hidden">
+              <div class="position-relative">
+                <img src="./assets/course-javascript.jpg" class="card-img-top" alt="JavaScript course logo"/>
+              </div>
+              <div class="card-body p-3">
+                <h3 class="card-title fs-6 mb-2 text-dark line-clamp-2">
+                  A Complete Beginner's Guide to JavaScript
+                </h3>
+                <div class="d-flex align-items-center gap-1 flex-wrap text-muted small-text mb-3">
+                  <ion-icon name="time-outline"></ion-icon>
+                  <span>4h 10m</span>
+                  <span class="mx-1">•</span>
+                  <span class="badge bg-light-danger text-danger px-2 py-1 rounded font-weight-bold">Advance</span>
+                </div>
+                <div class="d-flex align-items-center gap-1 mb-3">
+                  <div class="text-warning d-flex gap-05 fs-6">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-half"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                  </div>
+                  <span class="text-warning small-text ms-1">3.5</span>
+                  <span class="text-muted xs-text">(7,500)</span>
+                </div>
+                
+                <div class="d-flex align-items-center mb-0">
+                    <span class="fw-bold text-dark fs-5">$700</span>
+                    <span class="text-secondary fw-bold text-decoration-line-through small-text ms-2">$950</span>
+                </div>
+                <div class="card-extra-info small-text text-muted">
+                  Master the fundamentals of JavaScript.
+                  From basic syntax and variables to advanced ES6 features and DOM manipulation.
+                </div>
+              </div>
+              <div class="card-footer custom-card-footer bg-transparent border-top px-3 py-3 d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <img src="./assets/avatar-1.jpg" alt="Instructor avatar" class="rounded-circle" width="24" height="24"/>
+                  <span class="text-muted small-text fw-medium">Jenny Wilson</span>
+                </div>
+                <button class="btn p-0 bookmark-btn d-flex" type="button" aria-label="Add to bookmarks">
+                  <ion-icon name="bookmark-outline" class="fs-5"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col"> <!-- Node.js CARD -->
+            <div class="card h-100 border-0 shadow-sm course-card overflow-hidden">
+              <div class="position-relative">
+                <img src="./assets/course-node.jpg" class="card-img-top" alt="Node.js course logo"/>
+              </div>
+              <div class="card-body p-3">
+                <h3 class="card-title fs-6 mb-2 text-dark line-clamp-2">
+                  Beginning Node.js, Express & MongoDB Development
+                </h3>
+                <div class="d-flex align-items-center gap-1 flex-wrap text-muted small-text mb-3">
+                  <ion-icon name="time-outline"></ion-icon>
+                  <span>2h 00m</span>
+                  <span class="mx-1">•</span>
+                  <span class="badge bg-light-warning text-warning px-2 py-1 rounded font-weight-bold">Average</span>
+                </div>
+                <div class="d-flex align-items-center gap-1 mb-3">
+                  <div class="text-warning d-flex gap-05 fs-6">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                  </div>
+                  <span class="text-warning small-text ms-1">4.0</span>
+                  <span class="text-muted xs-text">(15,700)</span>
+                </div>
+                
+                <div class="d-flex align-items-center mb-0">
+                    <span class="fw-bold text-dark fs-5">$800</span>
+                    <span class="text-secondary fw-bold text-decoration-line-through small-text ms-2">$1,200</span>
+                </div>
+                <div class="card-extra-info small-text text-muted">
+                  Dive into backend development. Build RESTful APIs, 
+                  manage databases with MongoDB, and deploy your Node.js applications.
+                </div>
+              </div>
+              <div class="card-footer custom-card-footer bg-transparent border-top px-3 py-3 d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <img src="./assets/avatar-3.jpg" alt="Instructor avatar" class="rounded-circle" width="24" height="24"/>
+                  <span class="text-muted small-text fw-medium">Sina Ray</span>
+                </div>
+                <button class="btn p-0 bookmark-btn d-flex" type="button" aria-label="Add to bookmarks">
+                  <ion-icon name="bookmark-outline" class="fs-5"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col"> <!-- REACT CARD -->
+            <div class="card h-100 border-0 shadow-sm course-card overflow-hidden">
+              <div class="position-relative">
+                <img src="./assets/course-react.jpg" class="card-img-top" alt="React course graphic"/>
+              </div>
+              <div class="card-body p-3">
+                <h3 class="card-title fs-6 mb-2 text-dark line-clamp-2">
+                  React.js & React Native: The Complete Bootcamp
+                </h3>
+                <div class="d-flex align-items-center gap-1 flex-wrap text-muted small-text mb-3">
+                  <ion-icon name="time-outline"></ion-icon>
+                  <span>24h 00m</span>
+                  <span class="mx-1">•</span>
+                  <span class="badge bg-light-danger text-danger px-2 py-1 rounded font-weight-bold">Advance</span>
+                </div>
+                <div class="d-flex align-items-center gap-1 mb-3">
+                  <div class="text-warning d-flex gap-05 fs-6">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                  <span class="fw-bold text-dark small-text ms-1">4.9</span>
+                  <span class="text-muted xs-text">(45,000)</span>
+                </div>
+                
+                <div class="d-flex align-items-center mb-0">
+                    <span class="fw-bold text-dark fs-5">$299</span>
+                    <span class="text-secondary fw-bold text-decoration-line-through small-text ms-2">$600</span>
+                </div>
+                <div class="card-extra-info small-text text-muted">
+                  Dive deep into the React ecosystem. 
+                  Build dynamic web UIs, manage state with Redux, and master React Hooks in real-world projects.
+                </div>
+              </div>
+              <div class="card-footer custom-card-footer bg-transparent border-top px-3 py-3 d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <img src="./assets/avatar-2.jpg" alt="Instructor profile image" class="rounded-circle" width="24" height="24"/>
+                  <span class="text-muted small-text fw-medium">April Noms</span>
+                </div>
+                <button class="btn p-0 bookmark-btn d-flex" type="button" aria-label="Add to bookmarks">
+                  <ion-icon name="bookmark-outline" class="fs-5"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col"> <!-- Angular CARD -->
+            <div class="card h-100 border-0 shadow-sm course-card overflow-hidden">
+              <div class="position-relative">
+                <img src="./assets/course-angular.jpg" class="card-img-top" alt="Angular course graphic"/>
+              </div>
+              <div class="card-body p-3">
+                <h3 class="card-title fs-6 mb-2 text-dark line-clamp-2">
+                  Master Angular: The Complete Developer Guide
+                </h3>
+                <div class="d-flex align-items-center gap-1 flex-wrap text-muted small-text mb-3">
+                  <ion-icon name="time-outline"></ion-icon>
+                  <span>18h 30m</span>
+                  <span class="mx-1">•</span>
+                  <span class="badge bg-light-danger text-danger px-2 py-1 rounded font-weight-bold">Advance</span>
+                </div>
+                <div class="d-flex align-items-center gap-1 mb-3">
+                  <div class="text-warning d-flex gap-05 fs-6">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                  <span class="fw-bold text-dark small-text ms-1">4.8</span>
+                  <span class="text-muted xs-text">(12,400)</span>
+                </div>
+                
+                <div class="d-flex align-items-center mb-0">
+                    <span class="fw-bold text-dark fs-5">$190</span>
+                    <span class="text-secondary fw-bold text-decoration-line-through small-text ms-2">$320</span>
+                </div>
+                <div class="card-extra-info small-text text-muted">
+                  Build scalable enterprise applications using Angular.
+                  Learn components, directives, services, and advanced routing from the ground up.
+                </div>
+              </div>
+              <div class="card-footer custom-card-footer bg-transparent border-top px-3 py-3 d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <img src="./assets/avatar-3.jpg" alt="Instructor profile image" class="rounded-circle" width="24" height="24"/>
+                  <span class="text-muted small-text fw-medium">Robert Fox</span>
+                </div>
+                <button class="btn p-0 bookmark-btn d-flex" type="button" aria-label="Add to bookmarks">
+                  <ion-icon name="bookmark-outline" class="fs-5"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col"> <!-- Python CARD -->
+            <div class="card h-100 border-0 shadow-sm course-card overflow-hidden">
+              <div class="position-relative">
+                <img src="./assets/course-python.jpg" class="card-img-top" alt="Python course graphic"/>
+              </div>
+              <div class="card-body p-3">
+                <h3 class="card-title fs-6 mb-2 text-dark line-clamp-2">
+                  A Complete Beginner's Guide to Python
+                </h3>
+                <div class="d-flex align-items-center gap-1 flex-wrap text-muted small-text mb-3">
+                  <ion-icon name="time-outline"></ion-icon>
+                  <span>16h 20m</span>
+                  <span class="mx-1">•</span>
+                  <span class="badge bg-light-danger text-danger px-2 py-1 rounded font-weight-bold">Advance</span>
+                </div>
+                <div class="d-flex align-items-center gap-1 mb-3">
+                  <div class="text-warning d-flex gap-05 fs-6">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                  <span class="fw-bold text-dark small-text ms-1">5.0</span>
+                  <span class="text-muted xs-text">(856)</span>
+                </div>
+                
+                <div class="d-flex align-items-center mb-0">
+                    <span class="fw-bold text-dark fs-5">$320</span>
+                    <span class="text-secondary fw-bold text-decoration-line-through small-text ms-2">$450</span>
+                </div>
+                <div class="card-extra-info small-text text-muted">
+                  Go from zero to hero in Python. 
+                  We will cover data structures, object-oriented programming, and real-world scripting projects.
+                </div>
+              </div>
+              <div class="card-footer custom-card-footer bg-transparent border-top px-3 py-3 d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <img src="./assets/avatar-4.jpg" alt="Instructor profile image" class="rounded-circle" width="24" height="24"/>
+                  <span class="text-muted small-text fw-medium">Jenny Wilson</span>
+                </div>
+                <button class="btn p-0 bookmark-btn d-flex" type="button" aria-label="Add to bookmarks">
+                  <ion-icon name="bookmark-outline" class="fs-5"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- TRENDING COURSES SECTION -->
+      <section class="course-showcase-section py-5 dynamic-deck-section">
+        <div class="container pt-2">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="fs-3 text-dark mb-0">Trending</h2>
+          </div>
+          <div class="custom-carousel-container">
+            <div id="trendingCarouselEngine" class="carousel slide" data-bs-ride="false" data-bs-interval="false">
+              <div class="carousel-inner dynamic-carousel-target"></div>
+              <button class="carousel-control-prev custom-carousel-arrow" type="button" data-bs-target="#trendingCarouselEngine" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next custom-carousel-arrow" type="button" data-bs-target="#trendingCarouselEngine" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row d-none carousel-cards-pool">
+
+          <div class="col"> <!-- GATSBY CARD -->
+            <div class="card h-100 border-0 shadow-sm course-card overflow-hidden">
+              <div class="position-relative">
+                <img src="./assets/course-gatsby.jpg" class="card-img-top" alt="Gatsby course graphic"/>
+              </div>
+              <div class="card-body p-3">
+                <h3 class="card-title fs-6 mb-2 text-dark line-clamp-2">
+                  Build Blazing Fast Websites with Gatsby
+                </h3>
+                <div class="d-flex align-items-center gap-1 flex-wrap text-muted small-text mb-3">
+                  <ion-icon name="time-outline"></ion-icon>
+                  <span>4h 45m</span>
+                  <span class="mx-1">•</span>
+                  <span class="badge bg-light-warning text-warning px-2 py-1 rounded font-weight-bold">Average</span>
+                </div>
+                <div class="d-flex align-items-center gap-1 mb-3">
+                  <div class="text-warning d-flex gap-05 fs-6">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                  </div>
+                  <span class="fw-bold text-dark small-text ms-1">4.0</span>
+                  <span class="text-muted xs-text">(3,100)</span>
+                </div>
+                
+                <div class="d-flex align-items-center mb-0">
+                    <span class="fw-bold text-dark fs-5">$110</span>
+                    <span class="text-secondary fw-bold text-decoration-line-through small-text ms-2">$250</span>
+                </div>
+                <div class="card-extra-info small-text text-muted">
+                  Leverage React and GraphQL to generate incredibly fast static sites. 
+                  Perfect for modern blogs, portfolios, and headless e-commerce.
+                </div>
+              </div>
+              <div class="card-footer custom-card-footer bg-transparent border-top px-3 py-3 d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <img src="./assets/avatar-6.jpg" alt="Instructor profile image" class="rounded-circle" width="24" height="24"/>
+                  <span class="text-muted small-text fw-medium">Jenny Wilson</span>
+                </div>
+                <button class="btn p-0 bookmark-btn d-flex" type="button" aria-label="Add to bookmarks">
+                  <ion-icon name="bookmark-outline" class="fs-5"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col"> <!-- HTML CARD -->
+            <div class="card h-100 border-0 shadow-sm course-card overflow-hidden">
+              <div class="position-relative">
+                <img src="./assets/course-html.jpg" class="card-img-top" alt="HTML course graphic"/>
+              </div>
+              <div class="card-body p-3">
+                <h3 class="card-title fs-6 mb-2 text-dark line-clamp-2">
+                  HTML5 Fundamentals: Build Your First Webpage
+                </h3>
+                <div class="d-flex align-items-center gap-1 flex-wrap text-muted small-text mb-3">
+                  <ion-icon name="time-outline"></ion-icon>
+                  <span>2h 30m</span>
+                  <span class="mx-1">•</span>
+                  <span class="badge bg-light-success text-success px-2 py-1 rounded font-weight-bold">Beginner</span>
+                </div>
+                <div class="d-flex align-items-center gap-1 mb-3">
+                  <div class="text-warning d-flex gap-05 fs-6">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                  <span class="fw-bold text-dark small-text ms-1">5.0</span>
+                  <span class="text-muted xs-text">(22,100)</span>
+                </div>
+                
+                <div class="d-flex align-items-center mb-0">
+                    <span class="fw-bold text-dark fs-5">$29</span>
+                    <span class="text-secondary fw-bold text-decoration-line-through small-text ms-2">$90</span>
+                </div>
+                <div class="card-extra-info small-text text-muted">
+                  The ultimate starting point for web development. 
+                  Understand semantic HTML5 elements, web accessibility, forms, and media tags
+                </div>
+              </div>
+              <div class="card-footer custom-card-footer bg-transparent border-top px-3 py-3 d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <img src="./assets/avatar-8.jpg" alt="Instructor profile image" class="rounded-circle" width="24" height="24"/>
+                  <span class="text-muted small-text fw-medium">Miston Wilson</span>
+                </div>
+                <button class="btn p-0 bookmark-btn d-flex" type="button" aria-label="Add to bookmarks">
+                  <ion-icon name="bookmark-outline" class="fs-5"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col"> <!-- Node.js CARD -->
+            <div class="card h-100 border-0 shadow-sm course-card overflow-hidden">
+              <div class="position-relative">
+                <img src="./assets/course-node.jpg" class="card-img-top" alt="Node.js course logo"/>
+              </div>
+              <div class="card-body p-3">
+                <h3 class="card-title fs-6 mb-2 text-dark line-clamp-2">
+                  Beginning Node.js, Express & MongoDB Development
+                </h3>
+                <div class="d-flex align-items-center gap-1 flex-wrap text-muted small-text mb-3">
+                  <ion-icon name="time-outline"></ion-icon>
+                  <span>2h 00m</span>
+                  <span class="mx-1">•</span>
+                  <span class="badge bg-light-warning text-warning px-2 py-1 rounded font-weight-bold">Average</span>
+                </div>
+                <div class="d-flex align-items-center gap-1 mb-3">
+                  <div class="text-warning d-flex gap-05 fs-6">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                  </div>
+                  <span class="text-warning small-text ms-1">4.0</span>
+                  <span class="text-muted xs-text">(15,700)</span>
+                </div>
+                
+                <div class="d-flex align-items-center mb-0">
+                    <span class="fw-bold text-dark fs-5">$800</span>
+                    <span class="text-secondary fw-bold text-decoration-line-through small-text ms-2">$1,200</span>
+                </div>
+                <div class="card-extra-info small-text text-muted">
+                  Dive into backend development. Build RESTful APIs, 
+                  manage databases with MongoDB, and deploy your Node.js applications.
+                </div>
+              </div>
+              <div class="card-footer custom-card-footer bg-transparent border-top px-3 py-3 d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <img src="./assets/avatar-3.jpg" alt="Instructor avatar" class="rounded-circle" width="24" height="24"/>
+                  <span class="text-muted small-text fw-medium">Sina Ray</span>
+                </div>
+                <button class="btn p-0 bookmark-btn d-flex" type="button" aria-label="Add to bookmarks">
+                  <ion-icon name="bookmark-outline" class="fs-5"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col"> <!-- Laravel CARD -->
+            <div class="card h-100 border-0 shadow-sm course-card overflow-hidden">
+              <div class="position-relative">
+                <img src="./assets/course-laravel.jpg" class="card-img-top" alt="Laravel course logo"/>
+              </div>
+              <div class="card-body p-3">
+                <h3 class="card-title fs-6 mb-2 text-dark line-clamp-2">
+                  Laravel: The Ultimate Beginner's Guide to Learn
+                </h3>
+                <div class="d-flex align-items-center gap-1 flex-wrap text-muted small-text mb-3">
+                  <ion-icon name="time-outline"></ion-icon>
+                  <span>1h 00m</span>
+                  <span class="mx-1">•</span>
+                  <span class="badge bg-light-success text-success px-2 py-1 rounded font-weight-bold">Beginner</span>
+                </div>
+                <div class="d-flex align-items-center gap-1 mb-3">
+                  <div class="text-warning d-flex gap-05 fs-6">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-half"></ion-icon>
+                  </div>
+                  <span class="text-warning small-text ms-1">4.5</span>
+                  <span class="text-muted xs-text">(2,500)</span>
+                </div>
+                
+                <div class="d-flex align-items-center mb-0">
+                    <span class="fw-bold text-dark fs-5">$170</span>
+                    <span class="text-secondary fw-bold text-decoration-line-through small-text ms-2">$350</span>
+                </div>
+                <div class="card-extra-info small-text text-muted">
+                  The perfect starting point for PHP developers. 
+                  Learn routing, controllers, Blade templates, and Eloquent ORM.
+                </div>
+              </div>
+              <div class="card-footer custom-card-footer bg-transparent border-top px-3 py-3 d-flex align-items-center justify-content-between">
+                <div class="col-9 d-flex align-items-center gap-2 overflow-hidden">
+                  <img src="./assets/avatar-7.jpg" alt="Instructor avatar" class="rounded-circle flex-shrink-0" width="24" height="24"/>
+                  <span class="text-muted small-text fw-medium text-truncate">Sobo Rikhan</span>
+                </div>
+                <button class="btn p-0 bookmark-btn d-flex" type="button" aria-label="Add to bookmarks">
+                  <ion-icon name="bookmark-outline" class="fs-5"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col"> <!-- REACT CARD -->
+            <div class="card h-100 border-0 shadow-sm course-card overflow-hidden">
+              <div class="position-relative">
+                <img src="./assets/course-react.jpg" class="card-img-top" alt="React course graphic"/>
+              </div>
+              <div class="card-body p-3">
+                <h3 class="card-title fs-6 mb-2 text-dark line-clamp-2">
+                  React.js & React Native: The Complete Bootcamp
+                </h3>
+                <div class="d-flex align-items-center gap-1 flex-wrap text-muted small-text mb-3">
+                  <ion-icon name="time-outline"></ion-icon>
+                  <span>24h 00m</span>
+                  <span class="mx-1">•</span>
+                  <span class="badge bg-light-danger text-danger px-2 py-1 rounded font-weight-bold">Advance</span>
+                </div>
+                <div class="d-flex align-items-center gap-1 mb-3">
+                  <div class="text-warning d-flex gap-05 fs-6">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                  <span class="fw-bold text-dark small-text ms-1">4.9</span>
+                  <span class="text-muted xs-text">(45,000)</span>
+                </div>
+                
+                <div class="d-flex align-items-center mb-0">
+                    <span class="fw-bold text-dark fs-5">$299</span>
+                    <span class="text-secondary fw-bold text-decoration-line-through small-text ms-2">$600</span>
+                </div>
+                <div class="card-extra-info small-text text-muted">
+                  Dive deep into the React ecosystem. 
+                  Build dynamic web UIs, manage state with Redux, and master React Hooks in real-world projects.
+                </div>
+              </div>
+              <div class="card-footer custom-card-footer bg-transparent border-top px-3 py-3 d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <img src="./assets/avatar-2.jpg" alt="Instructor profile image" class="rounded-circle" width="24" height="24"/>
+                  <span class="text-muted small-text fw-medium">April Noms</span>
+                </div>
+                <button class="btn p-0 bookmark-btn d-flex" type="button" aria-label="Add to bookmarks">
+                  <ion-icon name="bookmark-outline" class="fs-5"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+    </main>
+
+    <!-- CARDS INVENTORY LISTS -->
+    <div id="carouselCardsPool" class="d-none">
+
+      <div class="col"> <!-- GraphQL CARD -->
+            <div class="card h-100 border-0 shadow-sm course-card overflow-hidden">
+              <div class="position-relative">
+                <img src="./assets/course-graphql.jpg" class="card-img-top" alt="GraphQL course logo"/>
+              </div>
+              <div class="card-body p-3">
+                <h3 class="card-title fs-6 mb-2 text-dark line-clamp-2">
+                  GraphQL: introduction to graphQL for beginners
+                </h3>
+                <div class="d-flex align-items-center gap-1 flex-wrap text-muted small-text mb-3">
+                  <ion-icon name="time-outline"></ion-icon>
+                  <span>2h 40m</span>
+                  <span class="mx-1">•</span>
+                  <span class="badge bg-light-danger text-danger px-2 py-1 rounded font-weight-bold">Advance</span>
+                </div>
+                <div class="d-flex align-items-center gap-1 mb-3">
+                  <div class="text-warning d-flex gap-05 fs-6">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-half"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                  </div>
+                  <span class="text-warning small-text ms-1">2.5</span>
+                  <span class="text-muted xs-text">(1,500)</span>
+                </div>
+                
+                <div class="d-flex align-items-center mb-0">
+                    <span class="fw-bold text-dark fs-5">$500</span>
+                    <span class="text-secondary fw-bold text-decoration-line-through small-text ms-2">$850</span>
+                </div>
+                <div class="card-extra-info small-text text-muted">
+                  Learn how to build modern APIs with GraphQL. 
+                  This course covers queries, mutations, resolvers, and integrating with Node.js backends.
+                </div>
+              </div>
+              <div class="card-footer custom-card-footer bg-transparent border-top px-3 py-3 d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <img src="./assets/avatar-5.jpg" alt="Instructor avatar" class="rounded-circle" width="24" height="24"/>
+                  <span class="text-muted small-text fw-medium">Brooklyn Simmons</span>
+                </div>
+                <button class="btn p-0 bookmark-btn d-flex" type="button" aria-label="Add to bookmarks">
+                  <ion-icon name="bookmark-outline" class="fs-5"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col"> <!-- JavaScript CARD -->
+            <div class="card h-100 border-0 shadow-sm course-card overflow-hidden">
+              <div class="position-relative">
+                <img src="./assets/course-javascript.jpg" class="card-img-top" alt="JavaScript course logo"/>
+              </div>
+              <div class="card-body p-3">
+                <h3 class="card-title fs-6 mb-2 text-dark line-clamp-2">
+                  A Complete Beginner's Guide to JavaScript
+                </h3>
+                <div class="d-flex align-items-center gap-1 flex-wrap text-muted small-text mb-3">
+                  <ion-icon name="time-outline"></ion-icon>
+                  <span>4h 10m</span>
+                  <span class="mx-1">•</span>
+                  <span class="badge bg-light-danger text-danger px-2 py-1 rounded font-weight-bold">Advance</span>
+                </div>
+                <div class="d-flex align-items-center gap-1 mb-3">
+                  <div class="text-warning d-flex gap-05 fs-6">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-half"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                  </div>
+                  <span class="text-warning small-text ms-1">3.5</span>
+                  <span class="text-muted xs-text">(7,500)</span>
+                </div>
+                
+                <div class="d-flex align-items-center mb-0">
+                    <span class="fw-bold text-dark fs-5">$700</span>
+                    <span class="text-secondary fw-bold text-decoration-line-through small-text ms-2">$950</span>
+                </div>
+                <div class="card-extra-info small-text text-muted">
+                  Master the fundamentals of JavaScript.
+                  From basic syntax and variables to advanced ES6 features and DOM manipulation.
+                </div>
+              </div>
+              <div class="card-footer custom-card-footer bg-transparent border-top px-3 py-3 d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <img src="./assets/avatar-1.jpg" alt="Instructor avatar" class="rounded-circle" width="24" height="24"/>
+                  <span class="text-muted small-text fw-medium">Jenny Wilson</span>
+                </div>
+                <button class="btn p-0 bookmark-btn d-flex" type="button" aria-label="Add to bookmarks">
+                  <ion-icon name="bookmark-outline" class="fs-5"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col"> <!-- Node.js CARD -->
+            <div class="card h-100 border-0 shadow-sm course-card overflow-hidden">
+              <div class="position-relative">
+                <img src="./assets/course-node.jpg" class="card-img-top" alt="Node.js course logo"/>
+              </div>
+              <div class="card-body p-3">
+                <h3 class="card-title fs-6 mb-2 text-dark line-clamp-2">
+                  Beginning Node.js, Express & MongoDB Development
+                </h3>
+                <div class="d-flex align-items-center gap-1 flex-wrap text-muted small-text mb-3">
+                  <ion-icon name="time-outline"></ion-icon>
+                  <span>2h 00m</span>
+                  <span class="mx-1">•</span>
+                  <span class="badge bg-light-warning text-warning px-2 py-1 rounded font-weight-bold">Average</span>
+                </div>
+                <div class="d-flex align-items-center gap-1 mb-3">
+                  <div class="text-warning d-flex gap-05 fs-6">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                  </div>
+                  <span class="text-warning small-text ms-1">4.0</span>
+                  <span class="text-muted xs-text">(15,700)</span>
+                </div>
+                
+                <div class="d-flex align-items-center mb-0">
+                    <span class="fw-bold text-dark fs-5">$800</span>
+                    <span class="text-secondary fw-bold text-decoration-line-through small-text ms-2">$1,200</span>
+                </div>
+                <div class="card-extra-info small-text text-muted">
+                  Dive into backend development. Build RESTful APIs, 
+                  manage databases with MongoDB, and deploy your Node.js applications.
+                </div>
+              </div>
+              <div class="card-footer custom-card-footer bg-transparent border-top px-3 py-3 d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <img src="./assets/avatar-3.jpg" alt="Instructor avatar" class="rounded-circle" width="24" height="24"/>
+                  <span class="text-muted small-text fw-medium">Sina Ray</span>
+                </div>
+                <button class="btn p-0 bookmark-btn d-flex" type="button" aria-label="Add to bookmarks">
+                  <ion-icon name="bookmark-outline" class="fs-5"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col"> <!-- Laravel CARD -->
+            <div class="card h-100 border-0 shadow-sm course-card overflow-hidden">
+              <div class="position-relative">
+                <img src="./assets/course-laravel.jpg" class="card-img-top" alt="Laravel course logo"/>
+              </div>
+              <div class="card-body p-3">
+                <h3 class="card-title fs-6 mb-2 text-dark line-clamp-2">
+                  Laravel: The Ultimate Beginner's Guide to Learn
+                </h3>
+                <div class="d-flex align-items-center gap-1 flex-wrap text-muted small-text mb-3">
+                  <ion-icon name="time-outline"></ion-icon>
+                  <span>1h 00m</span>
+                  <span class="mx-1">•</span>
+                  <span class="badge bg-light-success text-success px-2 py-1 rounded font-weight-bold">Beginner</span>
+                </div>
+                <div class="d-flex align-items-center gap-1 mb-3">
+                  <div class="text-warning d-flex gap-05 fs-6">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-half"></ion-icon>
+                  </div>
+                  <span class="text-warning small-text ms-1">4.5</span>
+                  <span class="text-muted xs-text">(2,500)</span>
+                </div>
+                
+                <div class="d-flex align-items-center mb-0">
+                    <span class="fw-bold text-dark fs-5">$170</span>
+                    <span class="text-secondary fw-bold text-decoration-line-through small-text ms-2">$350</span>
+                </div>
+                <div class="card-extra-info small-text text-muted">
+                  The perfect starting point for PHP developers. 
+                  Learn routing, controllers, Blade templates, and Eloquent ORM.
+                </div>
+              </div>
+              <div class="card-footer custom-card-footer bg-transparent border-top px-3 py-3 d-flex align-items-center justify-content-between">
+                <div class="col-9 d-flex align-items-center gap-2 overflow-hidden">
+                  <img src="./assets/avatar-7.jpg" alt="Instructor avatar" class="rounded-circle flex-shrink-0" width="24" height="24"/>
+                  <span class="text-muted small-text fw-medium text-truncate">Sobo Rikhan</span>
+                </div>
+                <button class="btn p-0 bookmark-btn d-flex" type="button" aria-label="Add to bookmarks">
+                  <ion-icon name="bookmark-outline" class="fs-5"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col"> <!-- Python CARD -->
+            <div class="card h-100 border-0 shadow-sm course-card overflow-hidden">
+              <div class="position-relative">
+                <img src="./assets/course-python.jpg" class="card-img-top" alt="Python course graphic"/>
+              </div>
+              <div class="card-body p-3">
+                <h3 class="card-title fs-6 mb-2 text-dark line-clamp-2">
+                  A Complete Beginner's Guide to Python
+                </h3>
+                <div class="d-flex align-items-center gap-1 flex-wrap text-muted small-text mb-3">
+                  <ion-icon name="time-outline"></ion-icon>
+                  <span>16h 20m</span>
+                  <span class="mx-1">•</span>
+                  <span class="badge bg-light-danger text-danger px-2 py-1 rounded font-weight-bold">Advance</span>
+                </div>
+                <div class="d-flex align-items-center gap-1 mb-3">
+                  <div class="text-warning d-flex gap-05 fs-6">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                  <span class="fw-bold text-dark small-text ms-1">5.0</span>
+                  <span class="text-muted xs-text">(856)</span>
+                </div>
+                
+                <div class="d-flex align-items-center mb-0">
+                    <span class="fw-bold text-dark fs-5">$320</span>
+                    <span class="text-secondary fw-bold text-decoration-line-through small-text ms-2">$450</span>
+                </div>
+                <div class="card-extra-info small-text text-muted">
+                  Go from zero to hero in Python. 
+                  We will cover data structures, object-oriented programming, and real-world scripting projects.
+                </div>
+              </div>
+              <div class="card-footer custom-card-footer bg-transparent border-top px-3 py-3 d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <img src="./assets/avatar-4.jpg" alt="Instructor profile image" class="rounded-circle" width="24" height="24"/>
+                  <span class="text-muted small-text fw-medium">Jenny Wilson</span>
+                </div>
+                <button class="btn p-0 bookmark-btn d-flex" type="button" aria-label="Add to bookmarks">
+                  <ion-icon name="bookmark-outline" class="fs-5"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col"> <!-- Angular CARD -->
+            <div class="card h-100 border-0 shadow-sm course-card overflow-hidden">
+              <div class="position-relative">
+                <img src="./assets/course-angular.jpg" class="card-img-top" alt="Angular course graphic"/>
+              </div>
+              <div class="card-body p-3">
+                <h3 class="card-title fs-6 mb-2 text-dark line-clamp-2">
+                  Master Angular: The Complete Developer Guide
+                </h3>
+                <div class="d-flex align-items-center gap-1 flex-wrap text-muted small-text mb-3">
+                  <ion-icon name="time-outline"></ion-icon>
+                  <span>18h 30m</span>
+                  <span class="mx-1">•</span>
+                  <span class="badge bg-light-danger text-danger px-2 py-1 rounded font-weight-bold">Advance</span>
+                </div>
+                <div class="d-flex align-items-center gap-1 mb-3">
+                  <div class="text-warning d-flex gap-05 fs-6">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                  <span class="fw-bold text-dark small-text ms-1">4.8</span>
+                  <span class="text-muted xs-text">(12,400)</span>
+                </div>
+                
+                <div class="d-flex align-items-center mb-0">
+                    <span class="fw-bold text-dark fs-5">$190</span>
+                    <span class="text-secondary fw-bold text-decoration-line-through small-text ms-2">$320</span>
+                </div>
+                <div class="card-extra-info small-text text-muted">
+                  Build scalable enterprise applications using Angular.
+                  Learn components, directives, services, and advanced routing from the ground up.
+                </div>
+              </div>
+              <div class="card-footer custom-card-footer bg-transparent border-top px-3 py-3 d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <img src="./assets/avatar-3.jpg" alt="Instructor profile image" class="rounded-circle" width="24" height="24"/>
+                  <span class="text-muted small-text fw-medium">Robert Fox</span>
+                </div>
+                <button class="btn p-0 bookmark-btn d-flex" type="button" aria-label="Add to bookmarks">
+                  <ion-icon name="bookmark-outline" class="fs-5"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col"> <!-- CSS CARD -->
+            <div class="card h-100 border-0 shadow-sm course-card overflow-hidden">
+              <div class="position-relative">
+                <img src="./assets/course-css.jpg" class="card-img-top" alt="CSS course graphic"/>
+              </div>
+              <div class="card-body p-3">
+                <h3 class="card-title fs-6 mb-2 text-dark line-clamp-2">
+                  CSS3 Bootcamp: Master Web Styling & Animations
+                </h3>
+                <div class="d-flex align-items-center gap-1 flex-wrap text-muted small-text mb-3">
+                  <ion-icon name="time-outline"></ion-icon>
+                  <span>6h 15m</span>
+                  <span class="mx-1">•</span>
+                  <span class="badge bg-light-success text-success px-2 py-1 rounded font-weight-bold">Beginner</span>
+                </div>
+                <div class="d-flex align-items-center gap-1 mb-3">
+                  <div class="text-warning d-flex gap-05 fs-6">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-half"></ion-icon>
+                  </div>
+                  <span class="fw-bold text-dark small-text ms-1">4.5</span>
+                  <span class="text-muted xs-text">(8,200)</span>
+                </div>
+                
+                <div class="d-flex align-items-center mb-0">
+                    <span class="fw-bold text-dark fs-5">$49</span>
+                    <span class="text-secondary fw-bold text-decoration-line-through small-text ms-2">$120</span>
+                </div>
+                <div class="card-extra-info small-text text-muted">
+                  Learn modern CSS3 from scratch. 
+                  Master Flexbox, CSS Grid, complex animations, and mobile-first responsive design principles.
+                </div>
+              </div>
+              <div class="card-footer custom-card-footer bg-transparent border-top px-3 py-3 d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <img src="./assets/avatar-4.jpg" alt="Instructor profile image" class="rounded-circle" width="24" height="24"/>
+                  <span class="text-muted small-text fw-medium">Eleanor Pena</span>
+                </div>
+                <button class="btn p-0 bookmark-btn d-flex" type="button" aria-label="Add to bookmarks">
+                  <ion-icon name="bookmark-outline" class="fs-5"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col"> <!-- GATSBY CARD -->
+            <div class="card h-100 border-0 shadow-sm course-card overflow-hidden">
+              <div class="position-relative">
+                <img src="./assets/course-gatsby.jpg" class="card-img-top" alt="Gatsby course graphic"/>
+              </div>
+              <div class="card-body p-3">
+                <h3 class="card-title fs-6 mb-2 text-dark line-clamp-2">
+                  Build Blazing Fast Websites with Gatsby
+                </h3>
+                <div class="d-flex align-items-center gap-1 flex-wrap text-muted small-text mb-3">
+                  <ion-icon name="time-outline"></ion-icon>
+                  <span>4h 45m</span>
+                  <span class="mx-1">•</span>
+                  <span class="badge bg-light-warning text-warning px-2 py-1 rounded font-weight-bold">Average</span>
+                </div>
+                <div class="d-flex align-items-center gap-1 mb-3">
+                  <div class="text-warning d-flex gap-05 fs-6">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                  </div>
+                  <span class="fw-bold text-dark small-text ms-1">4.0</span>
+                  <span class="text-muted xs-text">(3,100)</span>
+                </div>
+                
+                <div class="d-flex align-items-center mb-0">
+                    <span class="fw-bold text-dark fs-5">$110</span>
+                    <span class="text-secondary fw-bold text-decoration-line-through small-text ms-2">$250</span>
+                </div>
+                <div class="card-extra-info small-text text-muted">
+                  Leverage React and GraphQL to generate incredibly fast static sites. 
+                  Perfect for modern blogs, portfolios, and headless e-commerce.
+                </div>
+              </div>
+              <div class="card-footer custom-card-footer bg-transparent border-top px-3 py-3 d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <img src="./assets/avatar-6.jpg" alt="Instructor profile image" class="rounded-circle" width="24" height="24"/>
+                  <span class="text-muted small-text fw-medium">Jenny Wilson</span>
+                </div>
+                <button class="btn p-0 bookmark-btn d-flex" type="button" aria-label="Add to bookmarks">
+                  <ion-icon name="bookmark-outline" class="fs-5"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col"> <!-- HTML CARD -->
+            <div class="card h-100 border-0 shadow-sm course-card overflow-hidden">
+              <div class="position-relative">
+                <img src="./assets/course-html.jpg" class="card-img-top" alt="HTML course graphic"/>
+              </div>
+              <div class="card-body p-3">
+                <h3 class="card-title fs-6 mb-2 text-dark line-clamp-2">
+                  HTML5 Fundamentals: Build Your First Webpage
+                </h3>
+                <div class="d-flex align-items-center gap-1 flex-wrap text-muted small-text mb-3">
+                  <ion-icon name="time-outline"></ion-icon>
+                  <span>2h 30m</span>
+                  <span class="mx-1">•</span>
+                  <span class="badge bg-light-success text-success px-2 py-1 rounded font-weight-bold">Beginner</span>
+                </div>
+                <div class="d-flex align-items-center gap-1 mb-3">
+                  <div class="text-warning d-flex gap-05 fs-6">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                  <span class="fw-bold text-dark small-text ms-1">5.0</span>
+                  <span class="text-muted xs-text">(22,100)</span>
+                </div>
+                
+                <div class="d-flex align-items-center mb-0">
+                    <span class="fw-bold text-dark fs-5">$29</span>
+                    <span class="text-secondary fw-bold text-decoration-line-through small-text ms-2">$90</span>
+                </div>
+                <div class="card-extra-info small-text text-muted">
+                  The ultimate starting point for web development. 
+                  Understand semantic HTML5 elements, web accessibility, forms, and media tags
+                </div>
+              </div>
+              <div class="card-footer custom-card-footer bg-transparent border-top px-3 py-3 d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <img src="./assets/avatar-8.jpg" alt="Instructor profile image" class="rounded-circle" width="24" height="24"/>
+                  <span class="text-muted small-text fw-medium">Miston Wilson</span>
+                </div>
+                <button class="btn p-0 bookmark-btn d-flex" type="button" aria-label="Add to bookmarks">
+                  <ion-icon name="bookmark-outline" class="fs-5"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col"> <!-- REACT CARD -->
+            <div class="card h-100 border-0 shadow-sm course-card overflow-hidden">
+              <div class="position-relative">
+                <img src="./assets/course-react.jpg" class="card-img-top" alt="React course graphic"/>
+              </div>
+              <div class="card-body p-3">
+                <h3 class="card-title fs-6 mb-2 text-dark line-clamp-2">
+                  React.js & React Native: The Complete Bootcamp
+                </h3>
+                <div class="d-flex align-items-center gap-1 flex-wrap text-muted small-text mb-3">
+                  <ion-icon name="time-outline"></ion-icon>
+                  <span>24h 00m</span>
+                  <span class="mx-1">•</span>
+                  <span class="badge bg-light-danger text-danger px-2 py-1 rounded font-weight-bold">Advance</span>
+                </div>
+                <div class="d-flex align-items-center gap-1 mb-3">
+                  <div class="text-warning d-flex gap-05 fs-6">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                  <span class="fw-bold text-dark small-text ms-1">4.9</span>
+                  <span class="text-muted xs-text">(45,000)</span>
+                </div>
+                
+                <div class="d-flex align-items-center mb-0">
+                    <span class="fw-bold text-dark fs-5">$299</span>
+                    <span class="text-secondary fw-bold text-decoration-line-through small-text ms-2">$600</span>
+                </div>
+                <div class="card-extra-info small-text text-muted">
+                  Dive deep into the React ecosystem. 
+                  Build dynamic web UIs, manage state with Redux, and master React Hooks in real-world projects.
+                </div>
+              </div>
+              <div class="card-footer custom-card-footer bg-transparent border-top px-3 py-3 d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <img src="./assets/avatar-2.jpg" alt="Instructor profile image" class="rounded-circle" width="24" height="24"/>
+                  <span class="text-muted small-text fw-medium">April Noms</span>
+                </div>
+                <button class="btn p-0 bookmark-btn d-flex" type="button" aria-label="Add to bookmarks">
+                  <ion-icon name="bookmark-outline" class="fs-5"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col"> <!-- WORDPRESS CARD -->
+            <div class="card h-100 border-0 shadow-sm course-card overflow-hidden">
+              <div class="position-relative">
+                <img src="./assets/course-wordpress.jpg" class="card-img-top" alt="WordPress course graphic"/>
+              </div>
+              <div class="card-body p-3">
+                <h3 class="card-title fs-6 mb-2 text-dark line-clamp-2">
+                  WordPress for Beginners: Build a Website Today
+                </h3>
+                <div class="d-flex align-items-center gap-1 flex-wrap text-muted small-text mb-3">
+                  <ion-icon name="time-outline"></ion-icon>
+                  <span>5h 20m</span>
+                  <span class="mx-1">•</span>
+                  <span class="badge bg-light-warning text-warning px-2 py-1 rounded font-weight-bold">Average</span>
+                </div>
+                <div class="d-flex align-items-center gap-1 mb-3">
+                  <div class="text-warning d-flex gap-05 fs-6">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-half"></ion-icon>
+                  </div>
+                  <span class="fw-bold text-dark small-text ms-1">4.2</span>
+                  <span class="text-muted xs-text">(14,300)</span>
+                </div>
+                
+                <div class="d-flex align-items-center mb-0">
+                    <span class="fw-bold text-dark fs-5">$65</span>
+                    <span class="text-secondary fw-bold text-decoration-line-through small-text ms-2">$150</span>
+                </div>
+                <div class="card-extra-info small-text text-muted">
+                  Launch your website or blog without writing code. 
+                  Learn about themes, essential plugins, SEO basics, and the Gutenberg block editor.
+                </div>
+              </div>
+              <div class="card-footer custom-card-footer bg-transparent border-top px-3 py-3 d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <img src="./assets/avatar-7.jpg" alt="Instructor profile image" class="rounded-circle" width="24" height="24"/>
+                  <span class="text-muted small-text fw-medium">Sobo Rikhan</span>
+                </div>
+                <button class="btn p-0 bookmark-btn d-flex" type="button" aria-label="Add to bookmarks">
+                  <ion-icon name="bookmark-outline" class="fs-5"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+
+    </div>
+
+    <!-- FOOTER SECTION -->
+    <footer class="footer-container mt-auto">
+      <div class="container py-2 border-top">
+        <div class="row align-items-center justify-content-between g-2">
+          <div class="col-12 col-md-6 text-center text-md-start">
+            <span class="text-muted small-text">&copy;2026 devByPau M3-W3. All project rights reserved.</span>
+          </div>
+          <div class="col-12 col-md-6 text-center text-md-end">
+            <div class="d-flex justify-content-center justify-content-md-end gap-3 gap-lg-4 small-text">
+              <a href="#" class="text-muted text-decoration-none footer-link">Privacy</a>
+              <a href="#" class="text-muted text-decoration-none footer-link">Terms</a>
+              <a href="#" class="text-muted text-decoration-none footer-link">Feedback</a>
+              <a href="#" class="text-muted text-decoration-none footer-link">Support</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/bootstrap.bundle.js"></script>
+    <script src="./main.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  </body>
+</html>
