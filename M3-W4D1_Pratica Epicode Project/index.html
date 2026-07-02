@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix Clone</title>
+    <link rel="shortcut icon" href="./assets/imgs/netflix-favicon.png" type="image/png"/>
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="fixed-top" id="main-header">
+      <nav class="navbar navbar-expand-lg navbar-dark pb-0">
+        <div class="container-fluid ps-4 pe-4">
+          <a class="navbar-brand" href="#home" data-target="home">
+            <img src="./assets/imgs/Netflix_Logo_RGB.png" alt="Netflix Logo" class="brand-logo"/>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <ion-icon name="menu-outline" class="text-white mobile-menu-icon"></ion-icon>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="mobile-menu-wrapper flex-grow-1 d-lg-flex align-items-center">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 main-nav-links">
+                <li class="nav-item">
+                  <a class="nav-link" href="#home" data-target="home">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#tvshows" data-target="tvshows">TV Shows</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#movies" data-target="movies">Movies</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#recently-added" data-target="recently-added" >Recently Added</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#my-list" data-target="my-list">My List</a>
+                </li>
+              </ul>
+              <ul class="navbar-nav d-flex flex-row align-items-center gap-3 secondary-nav">
+                <li class="nav-item">
+                  <a href="#" class="nav-link"><ion-icon name="search-outline" class="nav-icon"></ion-icon></a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link text-uppercase">Kids</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link"><ion-icon name="notifications" class="nav-icon text-white"></ion-icon></a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link d-flex align-items-center gap-2">
+                    <img src="./assets/imgs/devByPau-profile.jpg" alt="Profile" class="profile-avatar rounded"/>
+                    <ion-icon name="caret-down-outline" class="text-white profile-caret"></ion-icon>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="tvshows" class="page-section active-section">
+        <div class="hero-container hero-tv-shows position-relative mb-4">
+          <div class="hero-overlay position-absolute w-100 h-100"></div>
+          <div class="container-fluid ps-5 hero-content position-absolute bottom-0 pb-5">
+            <h1 class="display-3 fw-bold text-white mb-3">
+              Kingdom
+            </h1>
+            <p class="lead text-white w-50 hero-description">
+              While strange rumors about their ill king grip a kingdom, the
+              crown prince becomes their only hope against a mysterious plague
+              overtaking the land.
+            </p>
+            <div class="d-flex gap-3 mt-4">
+              <a href="https://www.netflix.com/it/title/80180171" class="text-decoration-none">
+                <button class="btn btn-light btn-lg d-flex align-items-center gap-2 hero-btn">
+                  <ion-icon name="play"></ion-icon> Play
+                </button>
+              </a>
+              <a href="https://www.netflix.com/it/title/80180171#episodes" class="text-decoration-none">
+                <button class="btn btn-secondary btn-lg d-flex align-items-center gap-2 hero-btn info-btn">
+                  <ion-icon name="information-circle-outline"></ion-icon> More Info
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid ps-5 pe-5 pt-2 pb-4 d-flex justify-content-between align-items-center category-subheader">
+          <div class="d-flex align-items-center gap-4">
+            <h2 class="text-white mb-0 fw-bold d-flex align-items-center gap-2" id="dynamic-category-title">
+              TV Shows
+            </h2>
+
+            <div class="dropdown">
+              <button class="btn btn-dark dropdown-toggle genre-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Genres
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Anime</a></li>
+                <li><a class="dropdown-item" href="#">Comedy</a></li>
+                <li><a class="dropdown-item" href="#">Documentaries</a></li>
+                <li><a class="dropdown-item" href="#">Drama</a></li>
+                <li><a class="dropdown-item" href="#">Sci-Fi & Fantasy</a></li>
+                <li><a class="dropdown-item" href="#">Thrillers</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-center">
+            <div class="btn-group view-toggle-group" role="group" aria-label="View toggle">
+              <button type="button" class="btn view-btn">
+                <ion-icon name="list"></ion-icon>
+              </button>
+              <button type="button" class="btn view-btn active">
+                <ion-icon name="grid"></ion-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid ps-4 pe-4 overflow-hidden-x">
+          <div class="movie-row mb-5 fade-row">
+            <h3 class="text-white mb-3 row-title">
+              Trending Now
+            </h3>
+            <div class="row-container position-relative">
+              <button class="handle handle-prev">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+              </button>
+
+              <div class="row g-2 flex-nowrap slider-row">
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                  <div class="movie-card">
+                    <img src="./assets/imgs/unorthodox-MOVIE-1.png" alt="Unorthodox" class="img-fluid rounded w-100"/>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                  <div class="movie-card">
+                    <img src="./assets/imgs/afterLife-MOVIE-2.png" alt="After Life" class="img-fluid rounded w-100"/>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                  <div class="movie-card">
+                    <img src="./assets/imgs/visaVis-MOVIE-3.png" alt="Vis a Vis" class="img-fluid rounded w-100"/>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                  <div class="movie-card">
+                    <img src="./assets/imgs/thePlace-MOVIE-4.png" alt="The Place" class="img-fluid rounded w-100"/>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                  <div class="movie-card">
+                    <img src="./assets/imgs/summertime-MOVIE-5.png" alt="Summertime" class="img-fluid rounded w-100"/>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                  <div class="movie-card">
+                    <img src="./assets/imgs/delittiValhalla-MOVIE-6.png" alt="I Delitti di Valhalla" class="img-fluid rounded w-100"/>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                  <div class="movie-card">
+                    <img src="./assets/imgs/altraGrace-MOVIE-7.png" alt="L'Altra Grace" class="img-fluid rounded w-100"/>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                  <div class="movie-card">
+                    <img src="./assets/imgs/virginRiver-MOVIE-8.png" alt="Virgin River" class="img-fluid rounded w-100"/>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                  <div class="movie-card">
+                    <img src="./assets/imgs/englishGame-MOVIE-9.png" alt="The English Game" class="img-fluid rounded w-100"/>
+                  </div>
+                </div>
+              </div>
+              <button class="handle handle-next">
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+              </button>
+            </div>
+          </div>
+
+          <div class="movie-row mb-5 fade-row">
+            <h3 class="text-white mb-3 row-title">Watch it Again</h3>
+            <div class="row-container position-relative">
+              <button class="handle handle-prev">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+              </button>
+
+              <div class="row g-2 flex-nowrap slider-row">
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                  <div class="movie-card">
+                    <img src="./assets/imgs/dogMan-MOVIE-18.png" alt="Dogman" class="img-fluid rounded w-100"/>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                  <div class="movie-card">
+                    <img src="./assets/imgs/lasciatiAndare-MOVIE-17.png" alt="Lasciati Andare" class="img-fluid rounded w-100"/>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                  <div class="movie-card">
+                    <img src="./assets/imgs/graceFrankie-MOVIE-16.png" alt="Grace and Frankie" class="img-fluid rounded w-100"/>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                  <div class="movie-card">
+                    <img src="./assets/imgs/freud-MOVIE-15.png" alt="Freud" class="img-fluid rounded w-100"/>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                  <div class="movie-card">
+                    <img src="./assets/imgs/selfMade-MOVIE-14.png" alt="Self Made" class="img-fluid rounded w-100"/>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                  <div class="movie-card">
+                    <img src="./assets/imgs/collateralBeauty-MOVIE-13.png" alt="Collateral Beauty" class="img-fluid rounded w-100"/>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                  <div class="movie-card">
+                    <img src="./assets/imgs/casaFlores-MOVIE-12.png" alt="La Casa de las Flores" class="img-fluid rounded w-100"/>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                  <div class="movie-card">
+                    <img src="./assets/imgs/pattoAmore-MOVIE-11.png" alt="Patto d'Amore" class="img-fluid rounded w-100"/>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                  <div class="movie-card">
+                    <img src="./assets/imgs/mctodoKominsky-MOVIE-10.png" alt="Il Metodo Kominsky" class="img-fluid rounded w-100"/>
+                  </div>
+                </div>
+              </div>
+              <button class="handle handle-next">
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+              </button>
+            </div>
+          </div>
+
+          <div class="movie-row mb-5 fade-row">
+            <h3 class="text-white mb-3 row-title">New Releases</h3>
+            <div class="row-container position-relative">
+              <button class="handle handle-prev">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+              </button>
+
+              <div class="row g-2 flex-nowrap slider-row">
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                  <div class="movie-card">
+                    <img src="./assets/imgs/collateralBeauty-MOVIE-13.png" alt="Collateral Beauty" class="img-fluid rounded w-100"/>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                  <div class="movie-card">
+                    <img src="./assets/imgs/casaFlores-MOVIE-12.png" alt="La Casa de las Flores" class="img-fluid rounded w-100"/>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                  <div class="movie-card">
+                    <img src="./assets/imgs/dogMan-MOVIE-18.png" alt="Dogman" class="img-fluid rounded w-100"/>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                  <div class="movie-card">
+                    <img src="./assets/imgs/lasciatiAndare-MOVIE-17.png" alt="Lasciati Andare" class="img-fluid rounded w-100"/>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                  <div class="movie-card">
+                    <img src="./assets/imgs/thePlace-MOVIE-4.png" alt="The Place" class="img-fluid rounded w-100"/>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                  <div class="movie-card">
+                    <img src="./assets/imgs/summertime-MOVIE-5.png" alt="Summertime" class="img-fluid rounded w-100"/>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                  <div class="movie-card">
+                    <img src="./assets/imgs/delittiValhalla-MOVIE-6.png" alt="I Delitti di Valhalla" class="img-fluid rounded w-100"/>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                  <div class="movie-card">
+                    <img src="./assets/imgs/altraGrace-MOVIE-7.png" alt="L'Altra Grace" class="img-fluid rounded w-100"/>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                  <div class="movie-card">
+                    <img src="./assets/imgs/virginRiver-MOVIE-8.png" alt="Virgin River" class="img-fluid rounded w-100"/>
+                  </div>
+                </div>
+              </div>
+              <button class="handle handle-next">
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MY LIST SECTION -->
+      <section id="my-list" class="page-section d-none">
+        <div class="hero-container hero-my-list position-relative mb-4">
+          <div class="hero-overlay position-absolute w-100 h-100"></div>
+          <div class="container-fluid ps-5 hero-content position-absolute bottom-0 pb-5">
+            <h1 class="display-3 fw-bold text-white mb-3">
+              Alice in Borderland
+            </h1>
+            <p class="lead text-white w-50 hero-description">
+              An aimless gamer and his two friends find themselves in a parallel
+              Tokyo, where they're forced to compete in a series of sadistic
+              games to survive.
+            </p>
+            <div class="d-flex gap-3 mt-4">
+              <button class="btn btn-light btn-lg d-flex align-items-center gap-2 hero-btn">
+                <ion-icon name="play"></ion-icon> Play
+              </button>
+              <button class="btn btn-secondary btn-lg d-flex align-items-center gap-2 hero-btn info-btn">
+                <ion-icon name="information-circle-outline"></ion-icon> More Info
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid ps-5 pe-5 pt-2 pb-4 d-flex justify-content-between align-items-center category-subheader">
+          <div class="d-flex align-items-center gap-4">
+            <h2 class="text-white mb-0 fw-bold d-flex align-items-center gap-2">
+              My List
+            </h2>
+          </div>
+          <div class="d-flex align-items-center">
+            <div class="btn-group view-toggle-group" role="group" aria-label="View toggle">
+              <button type="button" class="btn view-btn">
+                <ion-icon name="list"></ion-icon>
+              </button>
+              <button type="button" class="btn view-btn active">
+                <ion-icon name="grid"></ion-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid ps-4 pe-4 overflow-hidden-x">
+          <div class="movie-row mb-5 fade-row">
+            <h3 class="text-white mb-3 row-title">
+              Saved for Later
+            </h3>
+            <div class="row-container position-relative">
+              <button class="handle handle-prev">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+              </button>
+
+              <div class="row g-2 flex-nowrap slider-row">
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                  <div class="movie-card">
+                    <img src="./assets/imgs/alchemySoul-KDRAMA.jpg" alt="Alchemy of Souls" class="img-fluid rounded w-100"/>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                  <div class="movie-card">
+                    <img src="./assets/imgs/aliceBorderland-KDRAMA.jpg" alt="Alice in Borderland" class="img-fluid rounded w-100"/>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                  <div class="movie-card">
+                    <img src="./assets/imgs/allOfUsAreDead-KDRAMA.jpg" alt="All of Us Are Dead" class="img-fluid rounded w-100"/>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                  <div class="movie-card">
+                    <img src="./assets/imgs/canTranslate-KDRAMA.jpg" alt="Can Translate" class="img-fluid rounded w-100"/>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                  <div class="movie-card">
+                    <img src="./assets/imgs/drRomantic-KDRAMA.jpg" alt="Dr Romantic" class="img-fluid rounded w-100"/>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                  <div class="movie-card">
+                    <img src="./assets/imgs/hellbound-KDRAMA.jpg" alt="Hellbound" class="img-fluid rounded w-100"/>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                  <div class="movie-card">
+                    <img src="./assets/imgs/kingdom-KDRAMA.jpg" alt="Kingdom" class="img-fluid rounded w-100"/>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                  <div class="movie-card">
+                    <img src="./assets/imgs/startup-KDRAMA.jpg" alt="Start-Up" class="img-fluid rounded w-100"/>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                  <div class="movie-card">
+                    <img src="./assets/imgs/traumaCode-KDRAMA.jpg" alt="Trauma Code" class="img-fluid rounded w-100"/>
+                  </div>
+                </div>
+              </div>
+
+              <button class="handle handle-next">
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OTHER EMPTY SECTIONS -->
+      <section id="home" class="page-section d-none pt-5 mt-5">
+        <div class="container-fluid ps-5 pe-5">
+          <h1 class="text-white mb-4 mt-5 pt-4">Home Content Area</h1>
+        </div>
+      </section>
+      <section id="movies" class="page-section d-none pt-5 mt-5">
+        <div class="container-fluid ps-5 pe-5">
+          <h1 class="text-white mb-4 mt-5 pt-4">Movies Content Area</h1>
+        </div>
+      </section>
+      <section id="recently-added" class="page-section d-none pt-5 mt-5">
+        <div class="container-fluid ps-5 pe-5">
+          <h1 class="text-white mb-4 mt-5 pt-4">Recently Added Content Area</h1>
+        </div>
+      </section>
+    </main>
+
+    <footer class="mt-5 pb-5 pt-5 text-secondary">
+      <div class="container-fluid ps-5 pe-5 w-75 mx-auto">
+        <div class="row mb-4">
+          <div class="col-12 d-flex gap-3 fs-4 text-white">
+            <ion-icon name="logo-facebook" class="cursor-pointer"></ion-icon>
+            <ion-icon name="logo-instagram" class="cursor-pointer"></ion-icon>
+            <ion-icon name="logo-twitter" class="cursor-pointer"></ion-icon>
+            <ion-icon name="logo-youtube" class="cursor-pointer"></ion-icon>
+          </div>
+        </div>
+        <div class="row mt-3 fs-6">
+          <div class="col-6 col-md-3 d-flex flex-column gap-2">
+            <a href="#" class="text-secondary text-decoration-none footer-link">Audio and Subtitles</a>
+            <a href="#" class="text-secondary text-decoration-none footer-link">Media Center</a>
+            <a href="#" class="text-secondary text-decoration-none footer-link">Privacy</a>
+            <a href="#" class="text-secondary text-decoration-none footer-link">Contact Us</a>
+          </div>
+          <div class="col-6 col-md-3 d-flex flex-column gap-2">
+            <a href="#" class="text-secondary text-decoration-none footer-link">Audio Description</a>
+            <a href="#" class="text-secondary text-decoration-none footer-link">Investor Relations</a>
+            <a href="#" class="text-secondary text-decoration-none footer-link">Legal Notices</a>
+          </div>
+          <div class="col-6 col-md-3 d-flex flex-column gap-2 mt-3 mt-md-0">
+            <a href="#" class="text-secondary text-decoration-none footer-link">Help Center</a>
+            <a href="#" class="text-secondary text-decoration-none footer-link">Jobs</a>
+            <a href="#" class="text-secondary text-decoration-none footer-link">Cookie Preferences</a>
+          </div>
+          <div class="col-6 col-md-3 d-flex flex-column gap-2 mt-3 mt-md-0">
+            <a href="#" class="text-secondary text-decoration-none footer-link">Gift Cards</a>
+            <a href="#" class="text-secondary text-decoration-none footer-link">Terms of Use</a>
+            <a href="#" class="text-secondary text-decoration-none footer-link">Corporate Information</a>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-12">
+            <button class="btn btn-outline-secondary btn-sm rounded-0 p-2 border-secondary">
+              Service Code
+            </button>
+            <p class="mt-3 mb-0 fs-7">
+              &copy; 1997-2026 devByPau, Epicode. {i-0d00fcda2fdf9c0de}
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/bootstrap.bundle.js"></script>
+    <script src="./main.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>
