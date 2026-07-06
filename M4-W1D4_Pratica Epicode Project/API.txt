@@ -1,0 +1,8 @@
+https://striveschool-api.herokuapp.com/api/deezer/search?q=INSERISCIQUIUNAQUERY
+
+Esempi:
+https://striveschool-api.herokuapp.com/api/deezer/search?q=eminem
+
+https://striveschool-api.herokuapp.com/api/deezer/search?q=metallica
+
+https://striveschool-api.herokuapp.com/api/deezer/search?q=queen
