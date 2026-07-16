@@ -1,0 +1,25 @@
+.book-cover {
+  height: 220px;
+  object-fit: contain;
+  padding: 0.75rem;
+  background-color: #f8f9fa;
+}
+
+.cart-panel {
+  top: 4.5rem;
+}
+
+.search-bar {
+  max-width: 420px;
+}
+
+.book-card {
+  transition: box-shadow 0.15s ease-in-out;
+}
+.book-card:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+ion-icon {
+  vertical-align: -0.15em;
+}
