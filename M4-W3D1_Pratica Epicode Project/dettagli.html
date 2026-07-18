@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <link rel="icon" href="./logo/devByPau-favicon.jpg" type="image/jpeg" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./style.css"/>
+  <title>Book detail</title>
+</head>
+
+<body>
+  <nav class="navbar bg-dark mb-4" data-bs-theme="dark">
+    <div class="container">
+      <a class="navbar-brand" href="./index.html">&larr; EpiBooks</a>
+    </div>
+  </nav>
+
+  <main class="container mb-5">
+    <!-- on screen until the single book comes back -->
+    <div id="spinner" class="text-center my-5">
+      <div class="spinner-border text-light" role="status">
+
+      </div>
+    </div>
+
+    <!-- toggleAlert() if fetch() fails -->
+    <div id="errorAlert" class="alert alert-danger d-none" role="alert">
+      We could not load this book. Please go back and try again.
+    </div>
+
+    <!-- cover and info get appended in here -->
+    <div id="bookDetail" class="row g-4"></div>
+  </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
+    <script src="./dettagli.js"></script>
+</body>
+
+</html>
