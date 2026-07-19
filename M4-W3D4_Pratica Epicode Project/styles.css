@@ -1,0 +1,90 @@
+:root {
+    --primaryColor: #D60176;
+    --secondaryColor-dark: #192155;
+    --secondaryColor-dark-rgb: 25, 33, 85;
+    --page-bg: #f4f5fb;
+}
+
+body {
+    background-color: var(--page-bg);
+    min-height: 100vh;
+}
+
+.app-header {
+    background: linear-gradient(135deg, var(--primaryColor), var(--secondaryColor-dark));
+    color: #fff;
+}
+
+.app-title {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.app-subtitle {
+    margin-bottom: 0;
+    opacity: 0.85;
+}
+
+/* Card dei filtri */
+.filter-card {
+    border: none;
+    border-radius: 0.75rem;
+}
+
+/* Dropdown */
+.dropdown .dropdown-toggle {
+    --bs-btn-color: var(--secondaryColor-dark);
+    --bs-btn-border-color: var(--secondaryColor-dark);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--secondaryColor-dark);
+    --bs-btn-hover-border-color: var(--secondaryColor-dark);
+    --bs-btn-focus-shadow-rgb: var(--secondaryColor-dark-rgb);
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--secondaryColor-dark);
+    --bs-btn-active-border-color: var(--secondaryColor-dark);
+}
+.dropdown-menu {
+    --bs-dropdown-link-color: var(--secondaryColor-dark);
+    --bs-dropdown-link-hover-color: #fff;
+    --bs-dropdown-link-hover-bg: var(--secondaryColor-dark);
+    --bs-dropdown-link-active-color: #fff;
+    --bs-dropdown-link-active-bg: var(--secondaryColor-dark);
+}
+
+.dropdown-item {
+    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+.dropdown-item:focus-visible {
+    outline: 2px solid var(--secondaryColor-dark);
+    outline-offset: -2px;
+}
+
+
+.users-table thead th {
+    white-space: nowrap;
+}
+
+.users-table td {
+    vertical-align: middle;
+}
+
+.users-table a {
+    text-decoration: none;
+    color: var(--primaryColor);
+}
+
+.users-table a:hover {
+    text-decoration: underline;
+}
+
+.results-count {
+    font-size: 0.9rem;
+}
+
+
+.empty-row td {
+    text-align: center;
+    padding: 2rem;
+    color: #6c757d;
+}
